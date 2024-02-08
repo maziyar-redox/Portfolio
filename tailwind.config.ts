@@ -18,7 +18,26 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "3xl": "2020px"
+      },
       colors: {
+        "gray-6": "#0F0F0F",
+        "gray-10": "#1A1A1A",
+        "gray-12": "#1F1F1F",
+        "gray-15": "#262626",
+        "gray-20": "#333333",
+        "gray-25": "#404040",
+        "gray-30": "#4C4C4C",
+        "gray-40": "#666666",
+        "white-50": "#808080",
+        "white-55": "#8C8C8C",
+        "white-60": "#999999",
+        "white-65": "#A6A6A6",
+        "white-70": "#B3B3B3",
+        "white-75": "#BFBFBF",
+        "white-80": "#CCCCCC",
+        "white-90": "#E6E6E6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

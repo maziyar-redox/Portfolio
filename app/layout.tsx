@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+
+import { ThemeProvider } from "@/components/theme-provider";
+
 import { Sora } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/app/(home)/_components/navbar";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -16,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sora.className}>{children}</body>
+      <body className={sora.className}>
+        <ThemeProvider defaultTheme="dark" forcedTheme="dark" attribute="class" enableSystem>
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 };
