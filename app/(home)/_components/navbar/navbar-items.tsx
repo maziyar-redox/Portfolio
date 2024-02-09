@@ -4,6 +4,7 @@ import { useMediaQuery } from "usehooks-ts";
 import { NavbarLinkContainer } from "./navbar";
 import { Button } from "@/components/ui/button";
 import { BarsBottomRight } from "@/components/svg/bars-bottom-right";
+import { SidebarStore } from "@/store/use-sidebat";
 
 const navLinks = [
     {
@@ -34,6 +35,10 @@ const navLinks = [
 
 export function NavbarItems() {
     const matches = useMediaQuery('(max-width: 1024px)');
+    const {
+        collapse,
+        onExpand
+    } = SidebarStore((state) => state);
     return (
         <>
             {!matches && (
@@ -44,7 +49,7 @@ export function NavbarItems() {
                 </ul>
             )}
             {matches && (
-                <Button size="icon" variant="selected">
+                <Button onClick={() => onExpand()} size="icon" variant="selected">
                     <BarsBottomRight />
                 </Button>
             )}

@@ -1,4 +1,6 @@
-import { Logo } from "./logo";
+"use client";
+
+import { Logo } from "@/components/logo";
 import { NavbarItems } from "./navbar-items";
 
 export function Navbar() {
