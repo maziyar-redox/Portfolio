@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HeroItems() {
     return (
@@ -18,11 +19,15 @@ export function HeroItems() {
                     Unlock Your Digital Potential Today
                 </h6>
                 <div className="flex flex-row space-x-2.5">
-                    <Button size="default" className="rounded-full font-normal" variant="default">
-                        Get Started
+                    <Button asChild size="default" className="rounded-full font-normal" variant="default">
+                        <Link href="/about">
+                            Get Started
+                        </Link>
                     </Button>
-                    <Button size="default" className="font-normal" variant="selected">
-                        Contact me
+                    <Button asChild size="default" className="font-normal" variant="selected">
+                        <Link href="/about">
+                            Contact me
+                        </Link>
                     </Button>
                 </div>
             </div>

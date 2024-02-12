@@ -10,3 +10,8 @@ export interface ReasonToChoseProps {
     header: string;
     caption: string;
 };
+
+export interface IconSize {
+    color?: string;
+    size?: number;
+};
