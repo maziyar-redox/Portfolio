@@ -38,6 +38,7 @@ const config = {
         "white-75": "#BFBFBF",
         "white-80": "#CCCCCC",
         "white-90": "#E6E6E6",
+        "bg-gray-abs": "#1E1E1E",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

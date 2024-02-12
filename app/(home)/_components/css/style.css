@@ -128,3 +128,10 @@
 	from, to { width: 0.2em; }
 	33% { width: 2.4em; }
 }
+
+/* CIRCLE */
+.crl {
+	stroke-width: 3px;
+	stroke-linecap: round;
+	fill: transparent;
+}

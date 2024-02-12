@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         notSelected: "text-white-90 hover:text-white border-transparent hover:border-gray-12 hover:bg-gray-10 rounded-3xl",
         selected: "text-white border border-gray-12 bg-gray-10 rounded-3xl 3xl:rounded-full",
+        readmore: "bg-gray-10 hover:bg-red-700 transition-all"
       },
       size: {
         default: "h-10 px-4 py-2",
