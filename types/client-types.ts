@@ -3,7 +3,7 @@ export interface NavbarLinkContainerProps {
     text: string;
 };
 
-export interface ReasonToChoseProps {
+export interface CardProps {
     id: number;
     href: string;
     icon: React.ReactNode;

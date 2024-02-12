@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReasonToChoseProps } from "@/types/client-types"
+import type { CardProps } from "@/types/client-types"
 
 import { useEffect, useRef } from "react";
 import { useInView, useAnimation, motion } from "framer-motion";
@@ -8,8 +8,9 @@ import { useInView, useAnimation, motion } from "framer-motion";
 import { ReadMoreButton } from "./readmore-button";
 import { cn } from "@/lib/utils";
 
-import "../css/style.css";
 import { useMediaQuery } from "usehooks-ts";
+
+import "../css/style.css";
 
 export function Cards({
     header,
@@ -17,7 +18,7 @@ export function Cards({
     caption,
     icon,
     id
-}: ReasonToChoseProps) {
+}: CardProps) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     const mainControls = useAnimation();

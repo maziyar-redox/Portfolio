@@ -43,8 +43,8 @@ export default function NotFound() {
                     <h1 className="text-white text-base md:text-xl font-medium">
                         Requested page is not found
                     </h1>
-                    <div className="border-2 border-gray-12 rounded-full px-2 lg:px-3 py-1 flex flex-row space-x-2 items-center justify-center">
-                        <h1 className="font-normal text-white text-xs lg:text-base">
+                    <div className="border-2 border-gray-12 rounded-full px-2 py-1 flex flex-row space-x-2 items-center justify-center">
+                        <h1 className="font-normal text-white text-xs lg:text-sm">
                             REQUESTED PATH :
                         </h1>
                         <span className="border rounded-full px-5 py-2 text-white text-xs lg:text-base">
