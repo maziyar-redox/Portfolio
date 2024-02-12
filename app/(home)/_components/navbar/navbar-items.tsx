@@ -1,6 +1,6 @@
 "use client";
 
-import { useMediaQuery } from "usehooks-ts";
+import { useLockedBody, useMediaQuery } from "usehooks-ts";
 import { NavbarLinkContainer } from "./navbar";
 import { Button } from "@/components/ui/button";
 import { BarsBottomRight } from "@/components/svg/bars-bottom-right";
@@ -39,6 +39,7 @@ export function NavbarItems() {
         collapse,
         onExpand
     } = SidebarStore((state) => state);
+    const [locked, setLocked] = useLockedBody(collapse, 'root');
     return (
         <>
             {!matches && (
@@ -49,7 +50,10 @@ export function NavbarItems() {
                 </ul>
             )}
             {matches && (
-                <Button onClick={() => onExpand()} size="icon" variant="selected">
+                <Button onClick={() => {
+                    onExpand();
+                    setLocked(!locked);
+                }} size="icon" variant="selected">
                     <BarsBottomRight />
                 </Button>
             )}

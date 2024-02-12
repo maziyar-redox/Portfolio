@@ -13,7 +13,7 @@ export function TextItems() {
         };
     }, [isInView]);
     return (
-        <div ref={ref} className="flex flex-col justify-center items-center space-y-2.5 md:space-y-5">
+        <div ref={ref} className="flex flex-col justify-center items-center space-y-2.5 md:space-y-5 overflow-x-hidden">
             <motion.h1 variants={{
                 hidden: { opacity: 0, x: 75 },
                 visible: { opacity: 1, x: 0 }

@@ -3,7 +3,6 @@
 import { useIsClient } from "usehooks-ts";
 import { LoadingState } from "./loading-page";
 import { Navbar } from "./navbar";
-import { motion } from "framer-motion";
 
 export function Wrapper({
     children
