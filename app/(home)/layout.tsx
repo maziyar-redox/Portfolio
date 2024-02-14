@@ -5,7 +5,7 @@ import { Wrapper } from "./_components/wrapper";
 
 export const metadata: Metadata = {
     title: "MrRedox Portolio | Home Page",
-    description: "MrRedox Portolio | Web developer and computer engineering student",
+    description: "Web developer and computer engineering student",
 };
 
 export default function HomeLayout({

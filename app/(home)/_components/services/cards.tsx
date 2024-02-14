@@ -42,7 +42,7 @@ export function Card({
     };
     const matches = useMediaQuery('(max-width: 1024px)');
     return (
-        <div ref={ref} className="border border-gray-10 bg-gray-10/5 flex flex-col justify-center items-center rounded-2xl col-span-1">
+        <div ref={ref} className="border border-gray-10 bg-gray-12/5 flex flex-col justify-center items-center rounded-2xl col-span-1">
             <div className="relative my-12">
                 <div>
                     <motion.svg

@@ -20,7 +20,7 @@ export function HeroItems() {
                 </h6>
                 <div className="flex flex-row space-x-2.5">
                     <Button asChild size="default" className="rounded-full font-normal" variant="default">
-                        <Link href="/about">
+                        <Link href="/services">
                             Get Started
                         </Link>
                     </Button>

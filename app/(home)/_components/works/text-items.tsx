@@ -15,16 +15,16 @@ export function TextItems() {
     return (
         <div ref={ref} className="flex flex-col justify-center items-center space-y-2.5 md:space-y-5 overflow-hidden">
             <motion.h1 variants={{
-                hidden: { opacity: 0, x: -75 },
-                visible: { opacity: 1, x: 0 }
+                hidden: { opacity: 0, y: -75 },
+                visible: { opacity: 1, y: 0 }
             }} initial="hidden" animate={mainControls} transition={{ duration: 0.5, delay: 0.25 }} className="font-semibold text-2xl md:text-3xl md:max-w-[400px] text-center leading-10">
-                <span className="text-red-600">My</span> Services
+                <span className="text-red-600">My</span> Works
             </motion.h1>
             <motion.p variants={{
-                hidden: { opacity: 0, x: 75 },
-                visible: { opacity: 1, x: 0 }
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 }
             }} initial="hidden" animate={mainControls} transition={{ duration: 0.5, delay: 0.5 }} className=" font-extralight text-white-50 text-xs md:text-base text-center mx-2 w-full md:max-w-[1200px]">
-                Our comprehensive range of services includes web design, mobile app development, SEO, social media marketing, and more. Whether you&apos;re a startup or an established enterprise, our experts will craft solutions that drive results.
+                Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we&apos;ve had with diverse clients across various industries. Let our work speak for itself.
             </motion.p>
         </div>
     );

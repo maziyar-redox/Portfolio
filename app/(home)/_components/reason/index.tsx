@@ -18,21 +18,21 @@ const ResonData = [
         id: 1,
         header: "Expertise That Drives Reault",
         caption: "Our team of seasoned professionals brings years of experience and expertise to the table.",
-        href: "/about",
+        href: "/services",
         icon: <SparklesFunction size={30} />
     },
     {
         id: 2,
         header: "Tailored Business Solutions",
         caption: "We understand that every business is unique. That's why our solutions are customized.",
-        href: "/about",
+        href: "/services",
         icon: <LightBulb size={30} />
     },
     {
         id: 3,
         header: "Cutting-Edge Web Design",
         caption: "Leave a lasting impression on your audience with our top-notch web design services.",
-        href: "/about",
+        href: "/services",
         icon: <CursorArrow size={30} />
     }
 ];
@@ -42,21 +42,21 @@ const ResonData2 = [
         id: 1,
         header: "Mobile-First Approach",
         caption: "In today's mobile-centric world, we prioritize mobile-first design to ensure your website.",
-        href: "/about",
+        href: "/services",
         icon: <DevicePhone size={30} />
     },
     {
         id: 2,
         header: "Marketing Strategies",
         caption: "Our data-driven marketing strategies allow us to target the right audience with precision.",
-        href: "/about",
+        href: "/services",
         icon: <Bolt size={30} />
     },
     {
         id: 3,
         header: "Search Engine Optimization",
         caption: "(SEO) Mastery Boost your online visibility with our expert SEO techniques.",
-        href: "/about",
+        href: "/services",
         icon: <SquaresPlus size={30} />
     },
 ];
