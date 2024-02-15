@@ -6,9 +6,9 @@ import { useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 
 export function Logo({
-    color = "white"
+    color = "white",
 }: {
-    color?: string
+    color?: string;
 }) {
     const [done, setDone] = useState(true);
     const matches = useMediaQuery('(max-width: 1024px)');

@@ -3,6 +3,7 @@
 import { useIsClient } from "usehooks-ts";
 import { LoadingState } from "./loading-page";
 import { Navbar } from "./navbar";
+import { Sidebar } from "./sidebar";
 
 export function Wrapper({
     children
@@ -17,6 +18,7 @@ export function Wrapper({
     };
     return (
         <>
+            <Sidebar />
             <Navbar />
             {children}
         </>

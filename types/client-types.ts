@@ -26,3 +26,20 @@ export interface AccourditionType {
         ac_id: number;
     }[];
 };
+
+export interface FooterIconsProps {
+    icon: React.ReactNode;
+    href: string;
+};
+
+export interface FooterLinksType {
+    data : {
+        Header_id: number;
+        text: string;
+        links: {
+            Link_id: number;
+            text: string;
+            href: string;
+        }[];
+    }[];
+};

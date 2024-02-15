@@ -1,4 +1,4 @@
-import "../_components/css/style.css";
+import "./css/style.css";
 
 export function LoadingState() {
     return (

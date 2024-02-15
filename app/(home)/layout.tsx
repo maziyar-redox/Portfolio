@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
-import { Sidebar } from "./_components/sidebar";
-import { Wrapper } from "./_components/wrapper";
+import { Wrapper } from "@/app/_components/wrapper";
 
 export const metadata: Metadata = {
     title: "MrRedox Portolio | Home Page",
@@ -15,7 +14,6 @@ export default function HomeLayout({
 }>) {
     return (
         <>
-            <Sidebar />
             <Wrapper>
                 {children}
             </Wrapper>

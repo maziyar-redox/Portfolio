@@ -1,3 +1,4 @@
+import { Footer } from "./_components/footer";
 import { HeroSection } from "./_components/hero";
 import { HeroWrapper } from "./_components/hero-wrapper";
 import { Question } from "./_components/question";
@@ -14,6 +15,7 @@ export default async function RootPage() {
                 <Services />
                 <Works />
                 <Question />
+                <Footer />
             </HeroWrapper>
         </>
     );

@@ -77,7 +77,7 @@ export function Question() {
                 </button>
                 <Input placeholder="Search..." className="rounded-full bg-gray-10 pl-8 pr-28 focus-visible:ring-0 focus-visible:border-white-90 focus-visible:ring-offset-0" type="text" />
             </div>
-            <div className="flex flex-col lg:flex-row w-full px-20 justify-center lg:space-y-0 space-y-5 lg:justify-between items-center">
+            <div className="flex flex-col lg:flex-row w-full px-0 lg:px-20 justify-center lg:space-y-0 space-y-5 lg:justify-between items-center">
                 <QuestionSmaples data={itemContainer.data} />
                 <QuestionSmaples data={itemContainer2.data} />
             </div>
