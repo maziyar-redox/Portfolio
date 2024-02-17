@@ -1,9 +1,11 @@
 "use client";
 
 import { useIsClient } from "usehooks-ts";
+
 import { LoadingState } from "./loading-page";
 import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
+import { Footer } from "./footer";
 
 export function Wrapper({
     children
@@ -21,6 +23,9 @@ export function Wrapper({
             <Sidebar />
             <Navbar />
             {children}
+            <div className="px-2.5 bg-gray-6">
+                <Footer />
+            </div>
         </>
     );
 };

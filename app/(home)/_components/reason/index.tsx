@@ -64,7 +64,7 @@ const ResonData2 = [
 export function ReasonToChose() {
     const matches = useMediaQuery('(max-width: 1024px)');
     return (
-        <div className="flex flex-col items-center justify-center px-10 pt-10 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
+        <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
             <TextItems />
             <div>
                 <div className={cn(

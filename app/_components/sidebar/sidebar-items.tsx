@@ -6,18 +6,24 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { SidebarStore } from "@/store/use-sidebat";
 
 export function SidebarItems({
     text,
     href
 }: NavbarLinkContainerProps) {
     const pathname = usePathname();
+    const {
+        onCollapse
+    } = SidebarStore((state) => state);
     return (
         <li>
             <Button disabled={href === pathname ? true : false} asChild variant="selected" size="default" className={cn(
                 "w-36",
                 pathname === href ? "opacity-85" : "opacity-100",
-            )}>
+            )} onClick={() => {
+                onCollapse()
+            }}>
                 <Link href={href}>
                     {text}
                 </Link>
