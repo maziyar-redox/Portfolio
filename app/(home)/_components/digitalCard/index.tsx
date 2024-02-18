@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function DigitalCard() {
     return (
-        <div className="border border-gray-10 bg-gray-12/5 flex flex-col justify-center items-center space-y-5 rounded-2xl px-5 md:px-40 pt-16 mt-10 mx-0 md:mx-10">
+        <div className="border border-gray-10 bg-gray-12/20 flex flex-col justify-center items-center space-y-5 rounded-2xl px-5 md:px-40 pt-16 mt-10 mx-0 md:mx-10">
             <h1 className="text-3xl text-white font-semibold text-center">
                 Ready to Transform Your Digital Presence?
             </h1>

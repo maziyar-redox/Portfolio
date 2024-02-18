@@ -8,6 +8,10 @@ const navLinks = [
         href: "/",
     },
     {
+        nav_text: "Services",
+        href: "/services",
+    },
+    {
         nav_text: "Contact me",
         href: "/contact",
     },
@@ -18,10 +22,6 @@ const navLinks = [
     {
         nav_text: "Projects",
         href: "/projects",
-    },
-    {
-        nav_text: "Services",
-        href: "/services",
     },
     {
         nav_text: "About me",

@@ -10,7 +10,7 @@ export function Links(Data: FooterLinksType) {
                         {items.text}
                     </h1>
                     {items.links.map((links_map) => (
-                        <Link className="text-xs font-normal text-white-50" href={links_map.href} key={links_map.Link_id}>
+                        <Link className="text-xs font-normal text-white-50 hover:text-white-90" href={links_map.href} key={links_map.Link_id}>
                             {links_map.text}
                         </Link>
                     ))}

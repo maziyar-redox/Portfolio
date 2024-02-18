@@ -31,7 +31,7 @@ export function Card({
                     />
                     <div className={cn(
                         "absolute top-1/3 transition-all",
-                        isMouse ? "scale-0 duration-200" : "duration-1000 animate-spin"
+                        isMouse && "scale-0 duration-200"
                     )}>
                         {icon}
                     </div>

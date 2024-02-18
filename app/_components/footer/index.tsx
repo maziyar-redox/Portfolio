@@ -199,7 +199,7 @@ export function Footer() {
             <Separator />
             <div className="flex flex-col md:flex-row justify-center space-y-3 md:space-y-0 md:justify-between items-center w-full pb-3">
                 <h1 className="text-xs text-gray-40">
-                    @2024 MrRed0x. All Rights Reserved.
+                    @2024 Maziyar Isanezhad. All Rights Reserved.
                 </h1>
                 <h1 className="text-xs text-gray-40">
                     version 0.1
