@@ -1,11 +1,17 @@
 "use client";
 
 import { X } from "@/components/svg/x-mark";
+
 import { Button } from "@/components/ui/button";
+
 import { cn } from "@/lib/utils";
+
 import { SidebarStore } from "@/store/use-sidebat";
+
 import { SidebarContainer } from "./sidebar";
+
 import { Logo } from "@/components/logo";
+
 import { useLockedBody } from "usehooks-ts";
 
 export function Sidebar() {

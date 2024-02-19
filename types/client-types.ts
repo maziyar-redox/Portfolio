@@ -1,3 +1,5 @@
+import type { Variant } from "framer-motion";
+
 export interface NavbarLinkContainerProps {
     href: string;
     text: string;
@@ -12,6 +14,17 @@ export interface CardProps {
     category?: string;
     img?: string;
     time?: Date;
+    price?: string
+};
+
+export interface VariantProps {
+    VisibleHighlightTextAnimation: Variant;
+    VisibleCaptionAnimation: Variant;
+    HighlightTextAnimation: Variant;
+    CaptionAnimation: Variant;
+    Text: string;
+    HighlightText: string;
+    Caption: string;
 };
 
 export interface IconSize {

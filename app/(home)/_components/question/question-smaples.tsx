@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { AccourditionType } from "@/types/client-types";
+
+import type { AccourditionType } from "@/types/client-types";
 
 export function QuestionSmaples(AccordionContentData: AccourditionType) {
     return (

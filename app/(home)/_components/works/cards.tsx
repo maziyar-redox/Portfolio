@@ -1,9 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+
+import type { CardProps } from "@/types/client-types";
+
 import { ProjectDetail } from "./project-detail";
-import { CardProps } from "@/types/client-types";
+
+import { useState } from "react";
+
 import { format } from "date-fns";
 
 export function Card({

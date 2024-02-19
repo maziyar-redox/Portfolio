@@ -1,7 +1,9 @@
 "use client";
 
 import { ArrowSmallRight } from "@/components/svg/Arrow-Right";
+
 import { Button } from "@/components/ui/button";
+
 import Link from "next/link";
 
 export function ProjectDetail({

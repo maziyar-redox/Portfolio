@@ -1,4 +1,5 @@
-import { FooterIconsProps } from "@/types/client-types";
+import type { FooterIconsProps } from "@/types/client-types";
+
 import Link from "next/link";
 
 export function FooterIcons({

@@ -1,13 +1,18 @@
 "use client";
 
-import { useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { TextItems } from "./text-items";
-import { Input } from "@/components/ui/input";
-import { ModifyingGlass } from "@/components/svg/modifying-glass";
-import { QuestionSmaples } from "./question-smaples";
 import type { AccourditionType } from "@/types/client-types";
-import { Separator } from "@/components/ui/separator";
+
+import { useAnimation, useInView } from "framer-motion";
+
+import { useEffect, useRef } from "react";
+
+import { Input } from "@/components/ui/input";
+
+import { ModifyingGlass } from "@/components/svg/modifying-glass";
+
+import { QuestionSmaples } from "./question-smaples";
+
+import { TextAnimation } from "@/components/HoveringText";
 
 const itemContainer: AccourditionType = {
     data: [
@@ -69,8 +74,28 @@ export function Question() {
         };
     }, [isInView]);
     return (
-        <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
-            <TextItems />
+        <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 pb-16 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
+            <TextAnimation
+                VisibleHighlightTextAnimation={{
+                    opacity: 1,
+                    y: 0
+                }}
+                HighlightTextAnimation={{
+                    opacity: 0,
+                    y: 75
+                }}
+                VisibleCaptionAnimation={{
+                    opacity: 1,
+                    y: 0
+                }}
+                CaptionAnimation={{
+                    opacity: 0,
+                    y: -75
+                }}
+                HighlightText="Reason to Chose me for"
+                Text="Your Developing Projects"
+                Caption="Partnering with DigitX offers a multitude of advantages. Experience increased brand visibility, improved customer engagement, and higher ROI. Our tailored solutions are designed to meet your unique business needs, ensuring lasting success."
+            />
             <div className="relative">
                 <button className="absolute top-1/4 left-2">
                     <ModifyingGlass size={19} />

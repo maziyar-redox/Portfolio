@@ -1,9 +1,11 @@
 import { Cmd } from "@/components/svg/cmd";
 import { DevicePhone } from "@/components/svg/device-phone";
-import { Card } from "./cards";
-import { TextItems } from "./text-items";
 import { CursorArrow } from "@/components/svg/cursor-arrow";
 import { Bolt } from "@/components/svg/bolt";
+
+import { Card } from "./cards";
+
+import { TextAnimation } from "@/components/HoveringText";
 
 const items = [
     {
@@ -39,7 +41,27 @@ const items = [
 export function Services() {
     return (
         <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
-            <TextItems />
+            <TextAnimation
+                VisibleHighlightTextAnimation={{
+                    opacity: 1,
+                    x: 0
+                }}
+                HighlightTextAnimation={{
+                    opacity: 0,
+                    x: -75
+                }}
+                VisibleCaptionAnimation={{
+                    opacity: 1,
+                    x: 0
+                }}
+                CaptionAnimation={{
+                    opacity: 0,
+                    x: 75
+                }}
+                HighlightText="My"
+                Text="Services"
+                Caption="Our comprehensive range of services includes web design, mobile app development, SEO, social media marketing, and more. Whether you&apos;re a startup or an established enterprise, our experts will craft solutions that drive results."
+            />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
                 {items.map((item) => (
                     <Card

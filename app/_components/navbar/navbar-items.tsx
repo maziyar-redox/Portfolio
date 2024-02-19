@@ -1,9 +1,13 @@
 "use client";
 
 import { useLockedBody, useMediaQuery } from "usehooks-ts";
+
 import { NavbarLinkContainer } from "./navbar";
+
 import { Button } from "@/components/ui/button";
+
 import { BarsBottomRight } from "@/components/svg/bars-bottom-right";
+
 import { SidebarStore } from "@/store/use-sidebat";
 
 const navLinks = [

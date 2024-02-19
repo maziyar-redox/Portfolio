@@ -1,4 +1,5 @@
-import { FooterLinksType } from "@/types/client-types";
+import type { FooterLinksType } from "@/types/client-types";
+
 import Link from "next/link";
 
 export function Links(Data: FooterLinksType) {

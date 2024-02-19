@@ -3,9 +3,11 @@
 import type { CardProps } from "@/types/client-types"
 
 import { useEffect, useRef } from "react";
+
 import { useInView, useAnimation, motion } from "framer-motion";
 
 import { ReadMoreButton } from "./readmore-button";
+
 import { cn } from "@/lib/utils";
 
 import { useMediaQuery } from "usehooks-ts";

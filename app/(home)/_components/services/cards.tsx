@@ -3,14 +3,16 @@
 import type { CardProps } from "@/types/client-types";
 
 import { motion, useAnimation, useInView } from "framer-motion";
+
 import { useEffect, useRef } from "react";
 
-import { DevicePhone } from "@/components/svg/device-phone";
+import { ReadMoreButton } from "./readmore-button";
+
+import { useMediaQuery } from "usehooks-ts";
+
+import Link from "next/link";
 
 import "../css/style.css";
-import { ReadMoreButton } from "./readmore-button";
-import { useMediaQuery } from "usehooks-ts";
-import Link from "next/link";
 
 export function Card({
     header,

@@ -6,6 +6,7 @@ import { LoadingState } from "./loading-page";
 import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
 import { Footer } from "./footer";
+import { DigitalCard } from "./digitalCard";
 
 export function Wrapper({
     children
@@ -24,6 +25,7 @@ export function Wrapper({
             <Navbar />
             {children}
             <div className="px-2.5 bg-gray-6">
+                <DigitalCard />
                 <Footer />
             </div>
         </>

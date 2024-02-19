@@ -3,10 +3,14 @@
 import type { NavbarLinkContainerProps } from "@/types/client-types";
 
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
 import { usePathname } from "next/navigation";
+
 import { cn } from "@/lib/utils";
+
 import { SidebarStore } from "@/store/use-sidebat";
+
+import Link from "next/link";
 
 export function SidebarItems({
     text,

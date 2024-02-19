@@ -1,14 +1,18 @@
 "use client";
 
 import { Logo } from "@/components/logo";
-import { Twitter } from "@/components/svg/twitter";
 
-import { FooterIcons } from "./icons";
+import { Twitter } from "@/components/svg/twitter";
 import { Instagram } from "@/components/svg/instagram-icon";
 import { LinkedIn } from "@/components/svg/linkedin";
-import { Separator } from "@/components/ui/separator";
-import { FooterLinksType } from "@/types/client-types";
+
+import { FooterIcons } from "./icons";
 import { Links } from "./links";
+
+import { Separator } from "@/components/ui/separator";
+
+import type { FooterLinksType } from "@/types/client-types";
+
 import Link from "next/link";
 
 const headers: FooterLinksType = {

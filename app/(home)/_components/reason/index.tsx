@@ -1,16 +1,21 @@
 "use client";
 
-import { Separator } from "@/components/ui/separator";
-import { Cards } from "./cards";
-import { TextItems } from "./text-items";
-import { SparklesFunction } from "@/components/svg/sparkles";
-import { useMediaQuery } from "usehooks-ts";
-import { cn } from "@/lib/utils";
 import { LightBulb } from "@/components/svg/light-bulb";
 import { CursorArrow } from "@/components/svg/cursor-arrow";
 import { DevicePhone } from "@/components/svg/device-phone";
 import { Bolt } from "@/components/svg/bolt";
 import { SquaresPlus } from "@/components/svg/squares-plus";
+import { SparklesFunction } from "@/components/svg/sparkles";
+
+import { Separator } from "@/components/ui/separator";
+
+import { Cards } from "./cards";
+
+import { useMediaQuery } from "usehooks-ts";
+
+import { cn } from "@/lib/utils";
+
+import { TextAnimation } from "@/components/HoveringText";
 
 
 const ResonData = [
@@ -65,7 +70,27 @@ export function ReasonToChose() {
     const matches = useMediaQuery('(max-width: 1024px)');
     return (
         <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
-            <TextItems />
+            <TextAnimation
+                VisibleHighlightTextAnimation={{
+                    opacity: 1,
+                    x: 0
+                }}
+                HighlightTextAnimation={{
+                    opacity: 0,
+                    x: 75
+                }}
+                VisibleCaptionAnimation={{
+                    opacity: 1,
+                    x: 0
+                }}
+                CaptionAnimation={{
+                    opacity: 0,
+                    x: -75
+                }}
+                HighlightText="Reason to Chose me for"
+                Text="Your Developing Projects"
+                Caption="Partnering with DigitX offers a multitude of advantages. Experience increased brand visibility, improved customer engagement, and higher ROI. Our tailored solutions are designed to meet your unique business needs, ensuring lasting success."
+            />
             <div>
                 <div className={cn(
                     "grid",
