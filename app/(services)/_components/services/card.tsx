@@ -12,7 +12,7 @@ export function Card() {
         if (isInView) {
             mainControls.start("visible");
         };
-    }, [isInView]);
+    }, [isInView, mainControls]);
     const draw = {
         hidden: { pathLength: 0, opacity: 0 },
         visible: (i: any) => {

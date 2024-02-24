@@ -65,14 +65,6 @@ const itemContainer2: AccourditionType = {
 };
 
 export function Question() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    const mainControls = useAnimation();
-    useEffect(() => {
-        if (isInView) {
-            mainControls.start("visible");
-        };
-    }, [isInView]);
     return (
         <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 pb-16 md:pt-24 mt-10 md:mt-0 space-y-8 lg:space-y-16">
             <TextAnimation

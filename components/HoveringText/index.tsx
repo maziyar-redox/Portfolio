@@ -22,7 +22,7 @@ export function TextAnimation({
         if (isInView) {
             mainControls.start("visible");
         };
-    }, [isInView]);
+    }, [isInView, mainControls]);
     return (
         <div ref={ref} className="flex flex-col justify-center items-center space-y-2.5 md:space-y-5 overflow-hidden">
             <motion.h1 variants={{
