@@ -10,32 +10,7 @@ import { BarsBottomRight } from "@/components/svg/bars-bottom-right";
 
 import { SidebarStore } from "@/store/use-sidebat";
 
-const navLinks = [
-    {
-        nav_text: "Home",
-        href: "/",
-    },
-    {
-        nav_text: "Services",
-        href: "/services",
-    },
-    {
-        nav_text: "Contact me",
-        href: "/contact",
-    },
-    {
-        nav_text: "Blogs",
-        href: "/blogs",
-    },
-    {
-        nav_text: "Projects",
-        href: "/projects",
-    },
-    {
-        nav_text: "About me",
-        href: "/about",
-    },
-];
+import { navigation_data } from "@/data/data";
 
 export function NavbarItems() {
     const matches = useMediaQuery('(max-width: 1024px)');
@@ -48,7 +23,7 @@ export function NavbarItems() {
         <>
             {!matches && (
                 <ul className="flex flex-row space-x-2.5">
-                    {navLinks.map((items) => (
+                    {navigation_data.map((items) => (
                         <NavbarLinkContainer key={items.href} href={items.href} text={items.nav_text} />
                     ))}
                 </ul>

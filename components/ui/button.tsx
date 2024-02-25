@@ -21,7 +21,7 @@ const buttonVariants = cva(
         notSelected: "text-white-90 hover:text-white border-transparent hover:border-gray-12 hover:bg-gray-10 rounded-3xl",
         selected: "text-white border border-gray-12 bg-gray-10 rounded-3xl 3xl:rounded-full",
         readmore: "bg-gray-10 hover:bg-red-700 transition-all",
-        learnMore: "bg-gray-10 hover:bg-red-700 hover:scale-105 transition-all border border-gray-15 rounded-full",
+        learnMore: "bg-gray-10 hover:bg-red-700 hover:scale-105 hover:border-none transition-all border border-gray-15 rounded-full",
         projectDetail: "bg-gray-10 border border-gray-12 hover:border-white transition-all rounded-full",
       },
       size: {

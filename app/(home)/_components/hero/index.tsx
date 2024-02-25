@@ -6,7 +6,7 @@ import { HeroItems } from "./hero-items";
 export function HeroSection() {
     return (
         <>
-            <div className="flex flex-col-reverse lg:flex-row justify-center lg:mx-10 items-center h-screen">
+            <div className="flex flex-col-reverse lg:flex-row justify-between lg:mx-10 items-center h-screen">
                 <HeroItems />
                 <BrandLogo />
             </div>
