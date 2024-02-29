@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 
-import { SidebarStore } from "@/store/use-sidebat";
+import { SidebarStore } from "@/store/use-sidebar";
 
 import Link from "next/link";
 

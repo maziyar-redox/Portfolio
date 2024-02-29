@@ -1,7 +1,7 @@
 export function Hero() {
     return (
         <div className="flex flex-col justify-center items-start my-14 md:my-28 md:max-w-[700px] mx-auto space-y-3 px-2.5">
-            <h1 className="text-white text-2xl md:text-start text-center md:text-3xl lg:text-5xl font-semibold">
+            <h1 className="text-white text-2xl md:text-start text-center md:text-3xl lg:text-5xl font-semibold w-full">
                 Our Comprehensive <span className="text-red-600">Digital Solutions</span> 
             </h1>
             <p className="md:text-sm text-xs font-normal text-white-55 text-center md:text-start">

@@ -23,6 +23,7 @@ const buttonVariants = cva(
         readmore: "bg-gray-10 hover:bg-red-700 transition-all",
         learnMore: "bg-gray-10 hover:bg-red-700 hover:scale-105 hover:border-none transition-all border border-gray-15 rounded-full",
         projectDetail: "bg-gray-10 border border-gray-12 hover:border-white transition-all rounded-full",
+        category: "hover:bg-gray-10 bg-transparent border border-gray-12 rounded-lg hover:border-transparent flex flex-row justify-start items-center space-x-2"
       },
       size: {
         default: "h-10 px-4 py-2",

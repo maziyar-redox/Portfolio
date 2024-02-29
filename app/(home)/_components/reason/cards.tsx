@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 import { useInView, useAnimation, motion } from "framer-motion";
 
-import { ReadMoreButton } from "./readmore-button";
+import { LearnMoreButton } from "./learnmore-button";
 
 import { cn } from "@/lib/utils";
 
@@ -82,7 +82,7 @@ export function Cards({
             <p className="max-w-md text-center text-xs lg:text-base font-extralight text-white-65">
                 {caption}
             </p>
-            <ReadMoreButton
+            <LearnMoreButton
                 link={href}
             />
         </div>

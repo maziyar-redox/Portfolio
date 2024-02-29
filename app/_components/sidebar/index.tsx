@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 
-import { SidebarStore } from "@/store/use-sidebat";
+import { SidebarStore } from "@/store/use-sidebar";
 
 import { SidebarContainer } from "./sidebar";
 

@@ -6,11 +6,9 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 import { useEffect, useRef } from "react";
 
-import { ReadMoreButton } from "./readmore-button";
+import { LearnMoreButton } from "./learnmore-button";
 
 import { useMediaQuery } from "usehooks-ts";
-
-import Link from "next/link";
 
 import "../css/style.css";
 
@@ -18,7 +16,8 @@ export function Card({
     header,
     href,
     icon,
-    caption
+    caption,
+    price
 }: CardProps) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -68,7 +67,7 @@ export function Card({
                     </motion.svg>
                 </div>
                 <div className="absolute top-[15px] left-[15px]">
-                    <motion.svg
+                <motion.svg
                         style={{
                             filter: "drop-shadow(0 0 4px #dc2626)"
                         }}
@@ -89,7 +88,7 @@ export function Card({
                     </motion.svg>
                 </div>
                 <div className="absolute top-[30px] left-[30px]">
-                    <motion.svg
+                <motion.svg
                         style={{
                             filter: "drop-shadow(0 0 4px #dc2626)"
                         }}
@@ -113,22 +112,19 @@ export function Card({
                     {icon}
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-center max-w-md pb-12 space-y-2.5">
-                <h1 className="text-white font-semibold text-sm md:text-base">
+            <div className="flex flex-col justify-center items-center max-w-xl pb-12 space-y-2.5">
+                <h1 className="text-white font-semibold text-sm md:text-lg">
                     {header}
                 </h1>
                 <p className="text-white-55 font-light text-xs md:text-sm text-center px-6 md:px-0">
-                    {matches && caption.substring(0, 100)}
-                    {matches && (
-                        <Link href={href} className="text-white font-normal">
-                            .Read More...
-                        </Link>
-                    )}
-                    {!matches && caption}
+                    {caption}
                 </p>
-                <div className="pt-4">
-                    <ReadMoreButton
-                        href={href}
+                <div className="flex flex-row justify-between items-center pt-6 w-full md:px-0 px-3">
+                    <h1 className="text-gray-40 text-xs md:text-sm font-normal text-wrap leading-5">
+                        Starts at Price : <span className="text-white">{price}</span>
+                    </h1>
+                    <LearnMoreButton
+                        link={href}
                     />
                 </div>
             </div>

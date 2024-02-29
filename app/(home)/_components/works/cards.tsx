@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-
 import type { CardProps } from "@/types/client-types";
+
+import { cn } from "@/lib/utils";
 
 import { ProjectDetail } from "./project-detail";
 
@@ -22,7 +22,7 @@ export function Card({
 }: CardProps) {
     const [isMouse, setIsMouse] = useState(false);
     return (
-        <div className="border border-gray-10 bg-gray-12/5 flex flex-col justify-center items-center rounded-2xl col-span-1">
+        <div className="border border-gray-10 bg-gray-12/20 flex flex-col justify-center items-center rounded-2xl col-span-1">
             <div className="w-full sm:my-8 my-6 px-6 sm:px-8">
                 <div className="relative flex justify-center items-center h-full z-20">
                     {/* IMG MUST BE 1280 x 620 */}

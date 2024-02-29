@@ -1,7 +1,9 @@
 "use client";
 
 import { HandRised } from "@/components/svg/hand-rised";
+
 import { motion } from "framer-motion";
+
 import { usePathname } from "next/navigation";
 
 export default function NotFound() {

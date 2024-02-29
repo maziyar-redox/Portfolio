@@ -1,5 +1,3 @@
-"use client";
-
 import { BrandLogo } from "./brand-logo";
 import { HeroItems } from "./hero-items";
 

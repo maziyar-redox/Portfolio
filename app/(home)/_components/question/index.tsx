@@ -2,10 +2,6 @@
 
 import type { AccourditionType } from "@/types/client-types";
 
-import { useAnimation, useInView } from "framer-motion";
-
-import { useEffect, useRef } from "react";
-
 import { Input } from "@/components/ui/input";
 
 import { ModifyingGlass } from "@/components/svg/modifying-glass";

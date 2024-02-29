@@ -1,5 +1,3 @@
-"use client";
-
 import { SidebarItems } from "./sidebar-items";
 
 import { navigation_data } from "@/data/data";

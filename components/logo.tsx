@@ -1,8 +1,11 @@
 "use client";
 
 import anime from "animejs";
+
 import Link from "next/link";
+
 import { useState } from "react";
+
 import { useMediaQuery } from "usehooks-ts";
 
 export function Logo({

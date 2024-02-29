@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
 
-export function ReadMoreButton({ link }: { link: string }) {
+export function LearnMoreButton({ link }: { link: string }) {
     return (
-        <div className="flex flex-row justify-center items-center space-x-4 border border-gray-12 rounded-full pr-2 pl-4 py-2 lg:py-2">
+        <div className="flex flex-row justify-center items-center space-x-4 border border-gray-12 rounded-full pr-2 pl-4 py-1.5">
             <h1 className="text-white font-light text-xs lg:text-sm">
                 Learn more
             </h1>
