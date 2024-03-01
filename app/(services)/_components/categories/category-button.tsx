@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import { SelectedStore } from "@/store/use-selected";
+import { ActiveStore } from "@/store/use-active";
 
 import { useMediaQuery } from "usehooks-ts";
 
@@ -24,6 +25,9 @@ export function CategoryButton({
         selected,
         setSelected
     } = SelectedStore((state) => state);
+    const {
+        setActiveItem
+    } = ActiveStore((state) => state);
     return (
         <>
             {isMatches
@@ -31,7 +35,10 @@ export function CategoryButton({
                 <Button variant="category" className={cn(
                     "py-6 w-full pr-10",
                     selected === text ? "bg-gray-10 border-transparent" : ""
-                )} asChild onClick={() => setSelected(text)}>
+                )} asChild onClick={() => {
+                    setSelected(text);
+                    setActiveItem(href);
+                }}>
                     <Link href={`#${href}`}>
                         {icon}
                         <h1 className={cn(
@@ -46,7 +53,10 @@ export function CategoryButton({
                 <Button variant="category" className={cn(
                     "py-6 w-full pr-20",
                     selected === text ? "bg-gray-10 border-transparent" : ""
-                )} onClick={() => setSelected(text)}>
+                )} onClick={() => {
+                    setSelected(text);
+                    setActiveItem(href);
+                }}>
                     {icon}
                     <h1 className={cn(
                         "text-white text-sm",

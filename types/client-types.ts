@@ -56,3 +56,19 @@ export interface FooterLinksType {
         }[];
     }[];
 };
+
+export interface CategoryContentProps {
+    CategoryId: string;
+    CategoryHeader: string;
+    CategoryCaption: string;
+    CategoryFeatures: {
+        Id: number;
+        Header: string;
+        Caption: string;
+    }[];
+    CategoryDProcess: {
+        Id: number;
+        Header: string;
+        Caption: string;
+    }[];
+};

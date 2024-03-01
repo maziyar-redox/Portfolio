@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Sora } from "next/font/google";
+
 import "./globals.css";
 
 const sora = Sora({ subsets: ["latin"] });

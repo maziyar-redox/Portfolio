@@ -6,6 +6,6 @@ interface SelectedStoreProps {
 };
 
 export const SelectedStore = create<SelectedStoreProps>((set) => ({
-    selected: "Web Development",
+    selected: "Web Design",
     setSelected: (item) => set((state) => ({ selected: item })),
 }));
