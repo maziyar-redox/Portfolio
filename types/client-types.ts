@@ -72,3 +72,15 @@ export interface CategoryContentProps {
         Caption: string;
     }[];
 };
+
+import { AnimationControls } from "framer-motion";
+
+export interface CategoryComponent {
+    classNames?: string;
+    children: React.ReactNode;
+    isCaption: boolean;
+    header: string;
+    caption?: string;
+    mainControls: AnimationControls;
+    transition: number;
+};

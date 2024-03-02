@@ -12,7 +12,9 @@ import { useEffect, useRef } from "react";
 
 import { Separator } from "@/components/ui/separator";
 
-import { useMediaQuery } from "usehooks-ts";
+import { ProjectDetail } from "./projectDetail-button";
+import { CategoryCard } from "./category-card";
+import { CategoryTable } from "./category-table";
 
 export function CategoryContent({
     CategoryId,
@@ -22,7 +24,6 @@ export function CategoryContent({
     CategoryDProcess
 }: CategoryContentProps) {
     const { activeItem } = ActiveStore((state) => state);
-    const matches = useMediaQuery('(max-width: 768px)');
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     const mainControls = useAnimation();
@@ -60,19 +61,12 @@ export function CategoryContent({
             }} initial="hidden" animate={mainControls} transition={{ duration: 0.5, delay: 0.5 }} className="text-white-55 text-xs md:text-sm text-start font-normal w-full">
                 {CategoryCaption}
             </motion.p>
-            <motion.div variants={{
-                hidden: {
-                    opacity: 0,
-                    x: 100
-                },
-                visible: {
-                    opacity: 1,
-                    x: 0
-                }
-            }} initial="hidden" animate={mainControls} transition={{ duration: 0.5, delay: 1 }} className="flex flex-col justify-center items-start border border-gray-12 rounded-xl w-full px-6 md:px-9 pt-6 md:pt-8 mt-4 md:mt-9">
-                <h1 className="text-white text-base md:text-xl font-semibold">
-                    Key Features
-                </h1>
+            <CategoryCard
+                transition={0.5}
+                mainControls={mainControls}
+                isCaption={false}
+                header="Key Features"
+            >
                 <div className="grid grid-cols-1 md:grid-cols-2 pt-12 pb-8 gap-y-4 md:gap-y-8">
                     {CategoryFeatures.map((items) => (
                         <>
@@ -102,16 +96,14 @@ export function CategoryContent({
                         </>
                     ))}
                 </div>
-            </motion.div>
-            <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl w-full px-6 md:px-9 pt-6 md:pt-8 mt-2 md:mt-9">
-                <div className="flex flex-col space-y-2.5">
-                    <h1 className="text-white text-base md:text-xl font-semibold">
-                        Design Process
-                    </h1>
-                    <p className="text-white-50 font-normal text-xs md:text-sm">
-                        Our Web Design process follows a systematic approach to deliver a website that aligns perfectly with your business needs and branding. Here&apos;s an overview of our design process
-                    </p>
-                </div>
+            </CategoryCard>
+            <CategoryCard
+                transition={1.5}
+                mainControls={mainControls}
+                isCaption
+                header="Design Process"
+                caption="Our Web Design process follows a systematic approach to deliver a website that aligns perfectly with your business needs and branding. Here&apos;s an overview of our design process."
+            >
                 <div className="grid grid-cols-1 md:grid-cols-2 pt-8 md:pt-12 pb-8 gap-y-4 md:gap-y-8">
                     {CategoryDProcess.map((items) => (
                         <>
@@ -141,17 +133,15 @@ export function CategoryContent({
                         </>
                     ))}
                 </div>
-            </div>
-            <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl w-full px-6 md:px-9 pt-6 md:pt-8 mt-2 md:mt-9">
-                <div className="flex flex-col space-y-2.5">
-                    <h1 className="text-white text-base md:text-xl font-semibold">
-                        Web Design Porfolio
-                    </h1>
-                    <p className="text-white-50 font-normal text-xs md:text-sm">
-                        Check out some of our most recent Web Design projects in the table below
-                    </p>
-                </div>
-                <div className="flex flex-row justify-between items-center gap-x-6 mt-10 relative">
+            </CategoryCard>
+            <CategoryCard
+                transition={2.5}
+                mainControls={mainControls}
+                isCaption
+                header="Web Design Porfolio"
+                caption="Check out some of our most recent Web Design projects in the table below."
+            >
+                <div className="flex flex-row justify-between items-center gap-x-3 md:gap-x-6 mt-5 md:mt-10 mb-16 md:mb-0 relative">
                     <div className="container px-0">
                         {/* eslint-disable-next-line */}
                         <img src="/img/3.jpg" className="object-cover object-center border border-gray-12 rounded-lg" alt="programming" />
@@ -161,8 +151,20 @@ export function CategoryContent({
                         <img src="/img/3.jpg" className="object-cover object-center border border-gray-12 rounded-lg" alt="programming" />
                     </div>
                     <div className="top-0 bottom-0 absolute right-0 left-0 bg-gradient-to-t from-gray-6 from-15% to-transparent" />
+                    <div className="absolute left-0 right-0 flex items-center justify-center -bottom-10 md:bottom-20">
+                        <ProjectDetail href="/services" />
+                    </div>
                 </div>
-            </div>
+            </CategoryCard>
+            <CategoryCard
+                transition={3.5}
+                mainControls={mainControls}
+                isCaption
+                header="Our Web Design Competed Projects"
+                caption="At DigitX, we are dedicated to creating transformative mobile apps that empower your business and enrich your users' experiences."
+            >
+                <CategoryTable />
+            </CategoryCard>
         </div>
     );
 };
