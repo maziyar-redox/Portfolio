@@ -84,3 +84,17 @@ export interface CategoryComponent {
     mainControls: AnimationControls;
     transition: number;
 };
+
+export interface SuccessCategoryItemProps {
+    icon: React.ReactNode;
+    head: string;
+};
+
+export interface SuccessCardProps {
+    MainIcon: React.ReactNode;
+    head: string;
+    categoryCardItems: SuccessCategoryItemProps[];
+    href: string;
+    challengeCaption: string;
+    SolutionCaption: string;
+};

@@ -54,7 +54,7 @@ export function CategoryTable() {
             )}
             {matches && (
                 <>
-                    <div className="flex flex-col gap-y-5 w-full mb-5">
+                    <div className="flex flex-col gap-y-5 w-full mb-5 mt-6">
                         {company_data.map((items) => (
                             <div key={items.id} className="flex flex-col justify-center items-center w-full border border-gray-12 px-3 py-3 rounded-xl gap-y-5">
                                 <div className="flex flex-col justify-center items-start gap-y-2 w-full">

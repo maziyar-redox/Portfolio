@@ -14,7 +14,7 @@ export function ProjectDetail({
     text?: string;
 }) {
     return (
-        <Button variant="projectDetail" className="space-x-2.5 bg-transparent backdrop-blur-md border-gray-15">
+        <Button variant="projectDetail" className="space-x-2.5 bg-transparent backdrop-blur-lg border-gray-15">
             <Link href={href} className="text-white text-xs font-light">
                 {text}
             </Link>

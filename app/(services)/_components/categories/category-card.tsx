@@ -35,7 +35,7 @@ export function CategoryCard({
                     <h1 className="text-white text-base md:text-xl font-semibold">
                         {header}
                     </h1>
-                    <p className="text-white-50 font-normal text-xs md:text-sm">
+                    <p className="text-white-50 font-light text-xs md:text-sm">
                         {caption}
                     </p>
                 </div>

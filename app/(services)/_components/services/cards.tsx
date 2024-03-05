@@ -67,7 +67,7 @@ export function Card({
                     </motion.svg>
                 </div>
                 <div className="absolute top-[15px] left-[15px]">
-                <motion.svg
+                    <motion.svg
                         style={{
                             filter: "drop-shadow(0 0 4px #dc2626)"
                         }}
@@ -88,7 +88,7 @@ export function Card({
                     </motion.svg>
                 </div>
                 <div className="absolute top-[30px] left-[30px]">
-                <motion.svg
+                    <motion.svg
                         style={{
                             filter: "drop-shadow(0 0 4px #dc2626)"
                         }}
