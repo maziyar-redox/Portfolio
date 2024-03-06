@@ -4,7 +4,7 @@ import type { CardProps } from "@/types/client-types";
 
 import { cn } from "@/lib/utils";
 
-import { ProjectDetail } from "./project-detail";
+import { CardButton } from "@/app/_components/card-button";
 
 import { useState } from "react";
 
@@ -40,9 +40,11 @@ export function Card({
                         {icon}
                     </div>
                     <div className="absolute -bottom-5">
-                        <ProjectDetail
-                            href={href}
-                        />
+                        <CardButton type="OUTER" variant={{
+                            variant: "projectDetail"
+                        }} href={href}>
+                            View Project Detail
+                        </CardButton>
                     </div>
                 </div>
             </div>

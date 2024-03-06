@@ -8,20 +8,24 @@ export const navigation_data = [
         href: "/services",
     },
     {
-        nav_text: "Contact me",
-        href: "/contact",
-    },
-    {
-        nav_text: "Blogs",
-        href: "/blogs",
-    },
-    {
         nav_text: "Projects",
         href: "/projects",
     },
     {
         nav_text: "About me",
         href: "/about",
+    },
+    {
+        nav_text: "Contact me",
+        href: "/contact",
+    },
+    {
+        nav_text: "Careers",
+        href: "careers"
+    },
+    {
+        nav_text: "Blogs",
+        href: "/blogs",
     },
 ];
 

@@ -6,7 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 import { useEffect, useRef } from "react";
 
-import { ReadMoreButton } from "./readmore-button";
+import { CardButton } from "@/app/_components/card-button";
 
 import { useMediaQuery } from "usehooks-ts";
 
@@ -127,9 +127,11 @@ export function Card({
                     {!matches && caption}
                 </p>
                 <div className="pt-4">
-                    <ReadMoreButton
-                        href={href}
-                    />
+                    <CardButton type="OUTER" variant={{
+                        variant: "learnMore"
+                    }} href={href}>
+                        Learn More
+                    </CardButton>
                 </div>
             </div>
         </div>

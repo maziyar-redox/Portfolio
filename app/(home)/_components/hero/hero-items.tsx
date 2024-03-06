@@ -18,14 +18,14 @@ export function HeroItems() {
             <h6 className="font-light text-white text-sm pt-6">
                 Unlock Your Digital Potential Today
             </h6>
-            <div className="flex flex-row space-x-2.5">
+            <div className="flex flex-row space-x-2.5 pt-1">
                 <Button asChild size="default" className="rounded-full font-light" variant="default">
                     <Link href="/services">
                         Get Started
                     </Link>
                 </Button>
                 <Button asChild size="default" className="font-light" variant="selected">
-                    <Link href="/about">
+                    <Link href="/contact">
                         Contact me
                     </Link>
                 </Button>

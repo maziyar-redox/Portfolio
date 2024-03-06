@@ -6,7 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 import { useEffect, useRef } from "react";
 
-import { LearnMoreButton } from "./learnmore-button";
+import { CardButton } from "@/app/_components/card-button";
 
 import { useMediaQuery } from "usehooks-ts";
 
@@ -123,9 +123,11 @@ export function Card({
                     <h1 className="text-gray-40 text-xs md:text-sm font-normal text-wrap leading-5">
                         Starts at Price : <span className="text-white">{price}</span>
                     </h1>
-                    <LearnMoreButton
-                        link={href}
-                    />
+                    <CardButton type="INNER" variant={{
+                        variant: "readmore"
+                    }} href={href}>
+                        Book a call
+                    </CardButton>
                 </div>
             </div>
         </div>

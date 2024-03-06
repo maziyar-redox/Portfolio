@@ -3,7 +3,8 @@ import { ReactIcon } from "@/components/svg/react-icon";
 import { TextAnimation } from "@/components/HoveringText";
 
 import { Card } from "./cards";
-import { ProjectDetail } from "./project-detail";
+
+import { CardButton } from "@/app/_components/card-button";
 
 /* TODO : THIS SECTION IS MUST FETCH FROM DATA BASE */
 const projects = [
@@ -88,10 +89,11 @@ export function Works() {
                     />
                 ))}
             </div>
-            <ProjectDetail
-                text="View All Projects"
-                href="/"
-            />
+            <CardButton type="OUTER" variant={{
+                variant: "projectDetail"
+            }} href="/">
+                View All Project
+            </CardButton>
         </div>
     );
 };

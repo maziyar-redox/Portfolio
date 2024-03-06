@@ -5,7 +5,7 @@ import { Card } from "./card";
 import { Unity } from "@/components/svg/unity";
 import { ChartBar } from "@/components/svg/chart-bar";
 import { Case } from "@/components/svg/case";
-import { DetailButton } from "./detail-button";
+import { CardButton } from "@/app/_components/card-button";
 
 const data = [
     {
@@ -87,7 +87,11 @@ export function Success() {
                     />
                 ))}
             </div>
-            <DetailButton link="/" />
+            <CardButton type="INNER" variant={{
+                variant: "readmore"
+            }} href="/">
+                View All Stories
+            </CardButton>
         </div>
     );
 };

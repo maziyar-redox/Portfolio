@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 import { Wrapper } from "@/app/_components/wrapper";
 
 export const metadata: Metadata = {
-    title: "MrRedox Portolio | Home Page",
+    title: "MrRedox Portolio | Contact Page",
     description: "Full-Stack Developer and computer engineering student",
 };
 
-export default function HomeLayout({
-    children
+export default function ContactLayout({
+    children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {

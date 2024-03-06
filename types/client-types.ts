@@ -1,4 +1,14 @@
 import type { Variant } from "framer-motion";
+import type { AnimationControls } from "framer-motion";
+import type { VariantProps as variantProps } from "class-variance-authority";
+import type { buttonVariants } from "@/components/ui/button";
+
+export interface ButtonProps {
+    type: "INNER" | "OUTER"
+    variant: variantProps<typeof buttonVariants>;
+    href: string;
+    children: React.ReactNode;
+};
 
 export interface NavbarLinkContainerProps {
     href: string;
@@ -72,8 +82,6 @@ export interface CategoryContentProps {
         Caption: string;
     }[];
 };
-
-import { AnimationControls } from "framer-motion";
 
 export interface CategoryComponent {
     classNames?: string;
