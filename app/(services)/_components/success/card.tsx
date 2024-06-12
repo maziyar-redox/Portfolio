@@ -6,9 +6,12 @@ import { useEffect, useRef } from "react";
 
 import { CategoryCard } from "./category-card";
 
-import "../css/style.css";
-import { SuccessCardProps } from "@/types/client-types";
 import { Separator } from "@/components/ui/separator";
+
+import "@/app/_components/css/style.css";
+
+import { SuccessCardProps } from "@/types/client-types";
+
 import Link from "next/link";
 
 export function Card({

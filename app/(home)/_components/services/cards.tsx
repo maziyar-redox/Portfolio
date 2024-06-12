@@ -12,7 +12,7 @@ import { useMediaQuery } from "usehooks-ts";
 
 import Link from "next/link";
 
-import "../css/style.css";
+import "@/app/_components/css/style.css";
 
 export function Card({
     header,

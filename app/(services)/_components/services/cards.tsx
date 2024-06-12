@@ -10,7 +10,7 @@ import { CardButton } from "@/app/_components/card-button";
 
 import { useMediaQuery } from "usehooks-ts";
 
-import "../css/style.css";
+import "@/app/_components/css/style.css";
 
 export function Card({
     header,

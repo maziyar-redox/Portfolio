@@ -46,9 +46,9 @@ export function Cards({
     const matches = useMediaQuery('(max-width: 1024px)');
     return (
         <div ref={ref} className={cn(
-            "flex flex-col items-center justify-center space-y-3.5 col-span-1 px-4",
-            id === 2 && !matches ? "border-r border-l border-gray-12" : "",
-            id === 2 && matches ? "border-t border-b border-gray-12 py-6" : ""
+            "flex flex-col items-center justify-center space-y-3.5 px-4",
+            id === 2 && !matches ? "border-r col-span-1 border-l border-gray-12" : "",
+            id === 2 && matches ? "border-t border-b border-gray-12 py-6 col-span-1" : "",
         )}>
             <div className="relative">
                 <div>
