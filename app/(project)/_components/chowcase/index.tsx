@@ -10,7 +10,7 @@ import { CardDescription } from "./card-description";
 
 export function ShowCase() {
     return (
-        <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 md:pt-24 md:mt-0 space-y-8 lg:space-y-16 max-w-5xl mx-auto">
+        <div className="flex flex-col items-center justify-center px-0 md:px-10 pt-10 md:pt-24 md:mt-0 space-y-8 lg:space-y-16 max-w-5xl mx-auto pb-10">
             <TextAnimation
                 VisibleHighlightTextAnimation={{
                     opacity: 1,
@@ -206,7 +206,115 @@ export function ShowCase() {
                         head="E-commerce"
                     />
                 </div>
-                <CardDescription></CardDescription>
+                <CardDescription>
+                    <div className="flex flex-row justify-center items-center border border-gray-12 rounded-xl w-full px-3 sm:px-9 py-3 sm:py-5 mt-8">
+                        <div className="flex flex-row justify-between items-start w-full border-r border-gray-12 mr-6">
+                            <div className="flex flex-col justify-center items-start gap-y-1">
+                                <span className="text-white-55 font-light text-sm">
+                                    Category
+                                </span>
+                                <h1 className="text-white font-light text-base">
+                                    E-commerce
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="flex flex-row justify-between items-start w-full border-r border-gray-12 mr-6">
+                            <div className="flex flex-col justify-center items-start gap-y-1">
+                                <span className="text-white-55 font-light text-sm">
+                                    Time Taken
+                                </span>
+                                <h1 className="text-white font-light text-base">
+                                    4 Months
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="flex flex-row justify-between items-start w-full border-r border-gray-12 mr-6">
+                            <div className="flex flex-col justify-center items-start gap-y-1">
+                                <span className="text-white-55 font-light text-sm">
+                                    Start Date
+                                </span>
+                                <h1 className="text-white font-light text-base">
+                                    January 15, 2023
+                                </h1>
+                            </div>
+                        </div>
+                        <div className="flex flex-row justify-between items-start w-full">
+                            <div className="flex flex-col justify-center items-start gap-y-1">
+                                <span className="text-white-55 font-light text-sm">
+                                    Completed Date
+                                </span>
+                                <h1 className="text-white font-light text-base">
+                                    May 15, 2023
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    {/* ------------------------------ */}
+                    <div className="flex flex-row justify-start items-center border border-gray-12 rounded-xl w-full px-3 sm:px-9 py-3 sm:py-5 mt-3 gap-x-6">
+                        <h1 className="text-white font-light text-base">
+                            Technologies used
+                        </h1>
+                        <span className="border border-gray-15 p-3 rounded-full bg-gray-10">
+                            <Unity size={18} />
+                        </span>
+                        <span className="border border-gray-15 p-3 rounded-full bg-gray-10">
+                            <Unity size={18} />
+                        </span>
+                        <span className="border border-gray-15 p-3 rounded-full bg-gray-10">
+                            <Unity size={18} />
+                        </span>
+                        <span className="border border-gray-15 p-3 rounded-full bg-gray-10">
+                            <Unity size={18} />
+                        </span>
+                    </div>
+                    {/* ------------------------------ */}
+                    <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl w-full gap-y-4 px-3 sm:px-9 py-3 sm:py-5 mt-3 gap-x-6">
+                        <h1 className="text-white font-light text-base">
+                            Team Members
+                        </h1>
+                        <div className="flex flex-row justify-between items-center w-full gap-x-4">
+                            <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl px-6 pt-5 pb-3.5 w-full">
+                                <h1 className="text-white font-light text-base">
+                                    Web Developer
+                                </h1>
+                                <div className="flex flex-row justify-center items-center mt-5 gap-x-2">
+                                    <img src="/img/4.jpg" className="w-10 h-10 rounded-full border border-gray-12 object-cover object-center" alt="programmer" />
+                                    <span className="text-white font-light text-sm">
+                                        Jhon Smith
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl px-6 pt-5 pb-3.5 w-full">
+                                <h1 className="text-white font-light text-base">
+                                    UI UX Designer
+                                </h1>
+                                <div className="flex flex-row justify-center items-center mt-5 gap-x-2">
+                                    <img src="/img/4.jpg" className="w-10 h-10 rounded-full border border-gray-12 object-cover object-center" alt="programmer" />
+                                    <span className="text-white font-light text-sm">
+                                        Jhon Smith
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl px-6 pt-5 pb-3.5 w-full">
+                                <h1 className="text-white font-light text-base">
+                                    Project Manager
+                                </h1>
+                                <div className="flex flex-row justify-center items-center mt-5 gap-x-2">
+                                    <img src="/img/4.jpg" className="w-10 h-10 rounded-full border border-gray-12 object-cover object-center" alt="programmer" />
+                                    <span className="text-white font-light text-sm">
+                                        Jhon Smith
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className="flex flex-col justify-center items-start border border-gray-12 rounded-xl w-full gap-y-4 px-3 sm:px-9 py-3 sm:py-5 mt-3 gap-x-6">
+                        <h1 className="text-white font-light text-base">
+                            Method used
+                        </h1>
+                        ff
+                    </div> */}
+                </CardDescription>
             </Card>
         </div>
     );

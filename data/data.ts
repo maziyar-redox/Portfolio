@@ -16,6 +16,10 @@ export const navigation_data = [
         nav_text: "Contact me",
         href: "/contact",
     },
+    {
+        nav_text: "Blog",
+        href: "/blog",
+    },
 ];
 
 export const company_data = [
