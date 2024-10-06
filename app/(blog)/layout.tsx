@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function ContactLayout({
+export default function BlogLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;

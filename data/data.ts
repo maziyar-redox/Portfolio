@@ -42,3 +42,26 @@ export const company_data = [
         href: "www.techguruinc.com"
     },
 ];
+
+export const tag_data = [
+    {
+        id: 1,
+        text: "All",
+        href: "#"
+    },
+    {
+        id: 1,
+        text: "Development",
+        href: "#"
+    },
+    {
+        id: 1,
+        text: "Business",
+        href: "#"
+    },
+    {
+        id: 1,
+        text: "Physics",
+        href: "#"
+    },
+];

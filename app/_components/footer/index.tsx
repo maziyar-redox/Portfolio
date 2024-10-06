@@ -206,7 +206,7 @@ export function Footer() {
                     @2024 Maziyar Isanezhad. All Rights Reserved.
                 </h1>
                 <h1 className="text-xs text-gray-40 font-mono border rounded-full p-0.5 px-1">
-                    version 0.1
+                    version 0.2
                 </h1>
                 <div className="flex flex-row justify-center items-center space-x-5">
                     <Link href="/" className="text-xs text-gray-40 font-light">

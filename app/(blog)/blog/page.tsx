@@ -1,7 +1,19 @@
-export default function ContactPage() {
+import { HeroWrapper } from "@/app/_components/hero-wrapper";
+
+import { Hero } from "../_components/hero";
+import { TagButton } from "../_components/tagButton";
+import { LatestCard } from "../_components/latestCard";
+import { BlogCard } from "../_components/blogCard";
+
+export default function BlogPage() {
     return (
-        <div className="flex items-center justify-center font-mono text-3xl text-white my-32">
-            COMING SOON...
-        </div>
+        <>
+            <Hero />
+            <HeroWrapper>
+                <TagButton />
+                <LatestCard />
+                <BlogCard />
+            </HeroWrapper>
+        </>
     );
 };
