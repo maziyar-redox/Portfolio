@@ -19,7 +19,7 @@ const projects = [
         category: "Web Development",
         time: new Date(),
         icon: <FaReact size={50} />,
-        img: "/img/2.jpg",
+        img: "https://raw.githubusercontent.com/maziyar-redox/my-blog-posts/refs/heads/main/projects/2.jpg",
         href: "/"
     },
     {
@@ -29,7 +29,7 @@ const projects = [
         category: "Web Development",
         time: new Date(),
         icon: <RiNextjsFill size={50} />,
-        img: "/img/2.jpg",
+        img: "https://raw.githubusercontent.com/maziyar-redox/my-blog-posts/refs/heads/main/projects/2.jpg",
         href: "/"
     },
     {
@@ -39,7 +39,7 @@ const projects = [
         category: "Web Development",
         time: new Date(),
         icon: <FaPython size={50} />,
-        img: "/img/2.jpg",
+        img: "https://raw.githubusercontent.com/maziyar-redox/my-blog-posts/refs/heads/main/projects/2.jpg",
         href: "/"
     },
     {
@@ -49,7 +49,7 @@ const projects = [
         category: "Web Development",
         time: new Date(),
         icon: <BiLogoPostgresql size={50} />,
-        img: "/img/2.jpg",
+        img: "https://raw.githubusercontent.com/maziyar-redox/my-blog-posts/refs/heads/main/projects/2.jpg",
         href: "/"
     },
 ];
