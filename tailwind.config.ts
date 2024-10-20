@@ -1,13 +1,12 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
-const config = {
-  darkMode: ["class"],
+const config: Config = {
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{ts,tsx}"
+  ],
   prefix: "",
   theme: {
     container: {
@@ -22,23 +21,26 @@ const config = {
         "3xl": "2020px"
       },
       colors: {
-        "gray-6": "#0F0F0F",
-        "gray-10": "#1A1A1A",
-        "gray-12": "#1F1F1F",
-        "gray-15": "#262626",
-        "gray-20": "#333333",
-        "gray-25": "#404040",
-        "gray-30": "#4C4C4C",
-        "gray-40": "#666666",
-        "white-50": "#808080",
-        "white-55": "#8C8C8C",
-        "white-60": "#999999",
-        "white-65": "#A6A6A6",
-        "white-70": "#B3B3B3",
-        "white-75": "#BFBFBF",
-        "white-80": "#CCCCCC",
-        "white-90": "#E6E6E6",
-        "bg-gray-abs": "#1E1E1E",
+        "absolute-white": "#FFF",
+        "absolute-black": "#000",
+        "red-shade-1": "#dc2626",
+        "red-shade-2": "#b91c1c",
+        "gray-shade-06": "#0F0F0F",
+        "gray-shade-10": "#1A1A1A",
+        "gray-shade-12": "#1F1F1F",
+        "gray-shade-15": "#262626",
+        "gray-shade-20": "#333333",
+        "gray-shade-25": "#404040",
+        "gray-shade-30": "#4C4C4C",
+        "gray-shade-40": "#666666",
+        "white-shade-50": "#808080",
+        "white-shade-55": "#8C8C8C",
+        "white-shade-60": "#999999",
+        "white-shade-65": "#A6A6A6",
+        "white-shade-70": "#B3B3B3",
+        "white-shade-75": "#BFBFBF",
+        "white-shade-80": "#CCCCCC",
+        "white-shade-90": "#E6E6E6",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -52,25 +54,12 @@ const config = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        caption: {
+          DEFAULT: "hsl(var(--caption))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
         },
       },
       borderRadius: {
@@ -94,7 +83,10 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography")
+  ],
+};
 
-export default config
+export default config;

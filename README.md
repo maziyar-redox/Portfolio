@@ -1,63 +1,36 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# Portfolio website with NextJs + Typescript
+## Getting Started
 
-This is a next project which i build for my portfolio and for managing my avtive project, progress for each project, and other developer that they contribute with me.
-
-## Screenshots
-
-![App Screenshot](https://raw.githubusercontent.com/maziyar-redox/portfolio/main/img/hero.PNG)
-
-![App Screenshot](https://raw.githubusercontent.com/maziyar-redox/portfolio/main/img/projects.PNG)
-
-![App Screenshot](https://raw.githubusercontent.com/maziyar-redox/portfolio/main/img/footer.PNG)
-## Run Locally
-
-Clone the project
+First, run the development server:
 
 ```bash
-  git clone https://github.com/maziyar-redox/portfolio
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Go to the project directory
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-  cd portfolio
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Install dependencies
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```bash
-  npm install
-```
+## Learn More
 
-Start the devServer
+To learn more about Next.js, take a look at the following resources:
 
-```bash
-  npm run dev
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-for build project
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```bash
-   npm run build
-```
+## Deploy on Vercel
 
-for preview project
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```bash
-   npm run start
-```
-## Deployment
-
-To deploy this project at first run this command below and then enter your liara credentials :
-
-```bash
-  npm run login
-```
-
-After that run this command :
-
-```bash
-  npm run deploy
-```
-## This Section is still Under Construction 🚧
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
