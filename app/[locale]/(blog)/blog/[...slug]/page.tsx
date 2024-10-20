@@ -13,10 +13,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Hashtag } from "./_components/hashtag";
 import { FormatDate } from "@/libs/formatDate";
 import { Metadata } from "next";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 interface PostPageProps {
     params: {
         slug: string[];
+        locale?: string;
     };
 };
 
@@ -78,6 +80,7 @@ export async function generateStaticParams(): Promise<PostPageProps["params"][]>
 };
 
 export default async function PostPage({ params }: PostPageProps) {
+    unstable_setRequestLocale(params.locale as string);
     const post = await getPostFromParams(params);
     if (!post || !post.published) {
         notFound();

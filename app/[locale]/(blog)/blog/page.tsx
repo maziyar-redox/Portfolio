@@ -63,7 +63,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                     <QueryPagination
                         totalPages={totalPages}
                         className="justify-center py-4"
-                        maxPageItem={POSTS_PER_PAGE}
                     />
                 )}
             </HeroWrapper>

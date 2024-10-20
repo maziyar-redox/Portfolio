@@ -3,14 +3,14 @@ import clsx from "clsx";
 
 interface PreProps extends React.HTMLProps<HTMLPreElement> {
     __rawstring__?: string;
-    ["data-language"]?: string;
+    /* ["data-language"]?: string; */
 };
 
 export function Pre(props :PreProps) {
     const {
         children,
         __rawstring__ = "",
-        ["data-language"]: dataLanguage = "Shell",
+        /* ["data-language"]: dataLanguage = "Shell", */
     } = props;
     return (
         <pre {...props} className={clsx("relative", props.className)}>

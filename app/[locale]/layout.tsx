@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 
@@ -58,6 +58,7 @@ export default async function LocaleLayout({
     children: React.ReactNode;
     params: { locale: string };
 }) {
+    unstable_setRequestLocale(locale);
     const messages = await getMessages();
     return (
         <html className="scroll-smooth" suppressHydrationWarning lang={locale}>

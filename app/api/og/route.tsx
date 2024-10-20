@@ -49,6 +49,7 @@ export async function GET(req: NextRequest) {
                             "width": "2.5rem",
                             "height": "2.5rem"
                         }}>
+                            {/* eslint-disable*/}
                             <img alt={githubUrl} style={{
                                 "width": "100%",
                                 "height": "100%"
@@ -114,7 +115,7 @@ export async function GET(req: NextRequest) {
                 ],
             },
         );
-    } catch (err: unknown) {
+    } catch {
         return new Response("Failed to generate image", { status: 500 });
     };
 };

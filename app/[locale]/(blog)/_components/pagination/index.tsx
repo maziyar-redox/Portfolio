@@ -16,13 +16,11 @@ import {
 interface QueryPaginationProps {
     totalPages: number;
     className?: string;
-    maxPageItem: number;
 };
 
 export function QueryPagination({
     totalPages,
     className,
-    maxPageItem
 }: QueryPaginationProps) {
     const pathname = usePathname();
     const router = useRouter();
