@@ -15,7 +15,7 @@ export function Card({
     return (
         <>
             <div className="border border-gray-shade-10 bg-gray-shade-12/20 flex flex-col justify-center items-center rounded-xl p-1.5 md:p-4 w-full col-span-4 lg:col-span-2">
-                <Image src={isImageUrl ? imageUrl as string : defaultImage as string} alt="" width={505} height={364} className="rounded-xl w-full" />
+                <Image priority={true} src={isImageUrl ? imageUrl as string : defaultImage as string} alt="" width={505} height={364} className="rounded-xl w-full" />
             </div>
         </>
     );

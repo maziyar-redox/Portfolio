@@ -30,7 +30,7 @@ export function DigitalCard() {
                 </div>
             </div>
             <Image
-                src="/img/logo.png"
+                src="https://raw.githubusercontent.com/maziyar-redox/my-blog-posts/refs/heads/main/logo/logo.png"
                 width={690}
                 height={690}
                 alt="mrRedox Logo"

@@ -53,8 +53,8 @@ export async function generateMetadata({
             type: "article",
             images: [
                 {
-                    url: `/api/og/${ogSearchParams.toString()}`,
-                    secureUrl: `/api/og/${ogSearchParams.toString()}`,
+                    url: `/api/og${ogSearchParams.toString()}`,
+                    secureUrl: `/api/og${ogSearchParams.toString()}`,
                     width: 1200,
                     height: 650,
                     alt: post.title,
@@ -68,7 +68,7 @@ export async function generateMetadata({
             description: post.description,
             creator: "@maziyar-redox",
             images: {
-                url: `/api/og/${ogSearchParams.toString()}`,
+                url: `/api/og${ogSearchParams.toString()}`,
                 alt: post.title,
             },
         },

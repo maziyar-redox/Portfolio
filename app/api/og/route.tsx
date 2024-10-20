@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { ImageResponse } from "next/og";
+import { FormatDate } from "@/libs/formatDate";
 
 export const runtime = "edge";
 
@@ -77,7 +78,7 @@ export async function GET(req: NextRequest) {
                         "lineHeight": "2rem",
                         "color": "#ffffff"
                     }}>
-                        {date}
+                        {FormatDate(date)}
                     </span>
                     <div style={{
                         "display": "flex",
