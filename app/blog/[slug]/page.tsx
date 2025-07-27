@@ -40,7 +40,6 @@ export default async function Page(props: { params: Promise<Params> }) {
     const params = await props.params;
     const { slug } = params;
     const result = await wisp.getPost(slug);
-    console.log(result.post?.tags);
     const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
     if (!result || !result.post) {
         return notFound();

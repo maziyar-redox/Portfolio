@@ -23,10 +23,9 @@ export function RelatedPosts({
                     <div className=" bg-muted overflow-hidden rounded-lg" key={post.id}>
                         <Link href={`/blog/${post.slug}`}>
                             <AspectRatio ratio={16 / 9} className="w-full">
-                                <Image
+                                <img
                                     src={post.image || "/images/placeholder.webp"}
                                     alt={post.title}
-                                    fill
                                     className="h -full min-h-full min-w-full object-cover object-center"
                                 />
                             </AspectRatio>
