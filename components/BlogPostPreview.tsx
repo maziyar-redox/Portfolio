@@ -15,11 +15,10 @@ export function BlogPostPreview({
         <div className="break-words">
             <Link href={`/blog/${post.slug}`}>
                 <div className="aspect-[16/9] relative">
-                    <Image
+                    <img
                         alt={post.title}
                         className="object-cover object-center"
                         src={post.image || "/images/placeholder.webp"}
-                        fill
                     />
                 </div>
             </Link>

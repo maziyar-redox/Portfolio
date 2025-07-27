@@ -65,13 +65,11 @@ export async function generateMetadata() {
         openGraph: {
             title: "About Me",
             description: "Learn more about Samantha and her travel adventures",
-            images: [
+            /* images: [
                 signOgImageUrl({
-                title: "Samantha",
-                label: "About Me",
-                brand: config.blog.name,
+                    blog_name:
                 }),
-            ],
+            ], */
         },
     };
 };

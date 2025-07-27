@@ -3,7 +3,6 @@ import { CommentSection } from "@/components/CommentSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { RelatedPosts } from "@/components/RelatedPosts";
-import { config } from "@/config/build-config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
 import { notFound } from "next/navigation";
@@ -18,15 +17,17 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
             title: "Blog post not found",
         };
     };
-    const { title, description, image } = result.post;
-    const generatedOgImage = signOgImageUrl({ title, brand: config.blog.name });
+    const { title, description } = result.post;
+    const generatedOgImage = signOgImageUrl({
+        blog_name: slug
+    });
     return {
-            title,
-            description,
-            openGraph: {
-            title,
-            description,
-            images: image ? [generatedOgImage, image] : [generatedOgImage],
+        title,
+        description,
+        openGraph: {
+            title: title as string,
+            description: description as string,
+            images: generatedOgImage,
         },
     };
 };
@@ -39,6 +40,7 @@ export default async function Page(props: { params: Promise<Params> }) {
     const params = await props.params;
     const { slug } = params;
     const result = await wisp.getPost(slug);
+    console.log(result.post?.tags);
     const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
     if (!result || !result.post) {
         return notFound();

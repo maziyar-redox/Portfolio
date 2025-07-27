@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     openGraph: {
         title: config.blog.metadata.title.default,
         description: config.blog.metadata.description,
-        images: [
-            signOgImageUrl({
-                title: config.blog.name,
-            }),
-        ],
+        //images: [
+        //    signOgImageUrl({
+        //        title: config.blog.name,
+        //    }),
+        //],
     },
 };
 

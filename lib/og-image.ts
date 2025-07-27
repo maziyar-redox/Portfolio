@@ -6,17 +6,13 @@ import urlJoin from "url-join";
 const secret = config.ogImageSecret;
 
 export interface OpenGraphImageParams {
-    title: string;
-    label?: string;
-    brand?: string;
-}
+    blog_name: string;
+};
 
 export const signOgImageParams = ({
-    title,
-    label,
-    brand,
+    blog_name
 }: OpenGraphImageParams) => {
-    const valueString = `${title}.${label}.${brand}`;
+    const valueString = `${blog_name}`;
     const signature = createHmac("sha256", secret).update(valueString).digest("hex");
     return { valueString, signature };
 };
@@ -31,13 +27,7 @@ export const verifyOgImageSignature = (
 
 export const signOgImageUrl = (param: OpenGraphImageParams) => {
     const queryParams = new URLSearchParams();
-    queryParams.append("title", param.title);
-    if (param.label) {
-        queryParams.append("label", param.label);
-    };
-    if (param.brand) {
-        queryParams.append("brand", param.brand);
-    };
+    queryParams.append("blog_name", param.blog_name);
     const { signature } = signOgImageParams(param);
     queryParams.append("s", signature);
     return urlJoin(config.baseUrl, `/api/og-image/?${queryParams.toString()}`);

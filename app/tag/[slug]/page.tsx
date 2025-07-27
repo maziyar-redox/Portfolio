@@ -44,8 +44,8 @@ export default async function Page(
             <Header />
             <Link href="/">
                 <Badge className="px-2 py-1">
-                <CircleX className="inline-block w-4 h-4 mr-2" />
-                Posts tagged with <strong className="mx-2">#{slug}</strong>{" "}
+                    <CircleX className="inline-block w-4 h-4 mr-2" />
+                    Posts tagged with <strong className="mx-2">#{slug}</strong>{" "}
                 </Badge>
             </Link>
             <BlogPostsPreview posts={result.posts} />

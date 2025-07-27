@@ -12,12 +12,12 @@ export async function generateMetadata() {
         openGraph: {
             title: "Tags",
             description: "Different blog post categories",
-            images: [
+            /* images: [
                 signOgImageUrl({
                     title: "Blog Post Categories",
                     brand: config.blog.name,
                 }),
-            ],
+            ], */
         },
     };
 }
