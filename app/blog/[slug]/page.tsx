@@ -19,6 +19,7 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
     };
     const { title, description } = result.post;
     const generatedOgImage = signOgImageUrl({
+        is_static: false,
         blog_name: slug
     });
     return {

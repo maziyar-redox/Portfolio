@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
     const signature = searchParams.get("s") || "";
     const verified = verifyOgImageSignature(
         {
+            is_static: false,
             blog_name: blog_name as string,
         },
         signature
@@ -20,5 +21,5 @@ export async function GET(request: NextRequest) {
         return new Response("Invalid request", { status: 400 });
     };
     const fonts = await loadFonts();
-    return generateBannerImage({ blog_name }, fonts);
+    return generateBannerImage({ blog_name, is_static: false }, fonts);
 };
