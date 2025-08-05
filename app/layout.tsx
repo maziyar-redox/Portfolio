@@ -1,5 +1,5 @@
 import { config } from "@/config/build-config";
-import { signOgImageUrl } from "@/lib/og-image";
+//import { signOgImageUrl } from "@/lib/og-image";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -32,7 +32,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
                 className={cn(
                     "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",

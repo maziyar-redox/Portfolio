@@ -7,6 +7,7 @@ const secret = config.ogImageSecret;
 
 export interface OpenGraphImageParams {
     blog_name: string;
+    is_static: boolean;
 };
 
 export const signOgImageParams = ({
@@ -25,10 +26,13 @@ export const verifyOgImageSignature = (
     return expectedSignature === signature;
 };
 
-export const signOgImageUrl = (param: OpenGraphImageParams) => {
+export const signOgImageUrl = ({
+    blog_name,
+    is_static = false
+}: OpenGraphImageParams) => {
     const queryParams = new URLSearchParams();
-    queryParams.append("blog_name", param.blog_name);
-    const { signature } = signOgImageParams(param);
+    queryParams.append("blog_name", blog_name);
+    const { signature } = signOgImageParams({ blog_name, is_static });
     queryParams.append("s", signature);
     return urlJoin(config.baseUrl, `/api/og-image/?${queryParams.toString()}`);
 };

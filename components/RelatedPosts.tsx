@@ -2,7 +2,7 @@
 
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import type { GetRelatedPostsResult } from "@wisp-cms/client";
-import Image from "next/image";
+//import Image from "next/image";
 import Link from "next/link";
 
 export function RelatedPosts({
