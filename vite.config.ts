@@ -1,26 +1,19 @@
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
-import { defineConfig } from 'vite'
-import { resolve } from 'node:path'
-
-const root = resolve(__dirname, "src");
-const outdir = resolve(__dirname, "dist");
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
+import { defineConfig } from "vite";
+import path from "path";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  root,
-  plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] })
-  ],
-  build: {
-    outDir: outdir,
-    emptyOutDir: true,
-    rolldownOptions: {
-      input: {
-        main: resolve(root, "index.html"),
-        nested: resolve(root, "nested", "index.html")
-      },
+    plugins: [
+        react(),
+        babel({ presets: [reactCompilerPreset()] }),
+        tailwindcss()
+    ],
+    resolve: {
+        alias: {
+            "@/client": path.resolve(import.meta.dirname, "./src/client"),
+        },
     },
-  },
-})
+});

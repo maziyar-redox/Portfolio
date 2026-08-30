@@ -1,31 +1,38 @@
 {
-  "name": "portfolio",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@rolldown/plugin-babel": "^0.2.3",
-    "@types/babel__core": "^7.20.5",
-    "@types/node": "^24.13.3",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
-    "@vitejs/plugin-react": "^6.1.0",
-    "babel-plugin-react-compiler": "^1.0.0",
-    "express": "^5.2.1",
-    "oxlint": "^1.79.0",
-    "typescript": "~6.0.2",
-    "vite": "^8.2.2",
-    "vite-express": "^0.22.1"
-  }
+    "name": "portfolio",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "dotenvx run -f ./.env -f ./.env.development -- nodemon -w src/server -x tsx src/server/main.ts",
+        "build": "dotenvx run -f ./.env -f ./.env.production -- tsc -b && vite build",
+        "start": "dotenvx run -f ./.env -f ./.env.production -- tsx src/server/main.ts",
+        "lint": "oxlint",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.3.3",
+        "express": "^5.2.1",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "tailwindcss": "^4.3.3",
+        "tsx": "^4.23.13",
+        "vite-express": "^0.22.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.29.7",
+        "@dotenvx/dotenvx": "^2.22.0",
+        "@rolldown/plugin-babel": "^0.2.3",
+        "@types/babel__core": "^7.20.5",
+        "@types/express": "^5.0.6",
+        "@types/node": "^24.13.3",
+        "@types/react": "^19.2.18",
+        "@types/react-dom": "^19.2.4",
+        "@vitejs/plugin-react": "^6.1.0",
+        "babel-plugin-react-compiler": "^1.0.0",
+        "nodemon": "^3.1.14",
+        "oxlint": "^1.79.0",
+        "typescript": "~6.0.2",
+        "vite": "^8.2.2"
+    }
 }
