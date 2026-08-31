@@ -5,8 +5,12 @@ import "@/client/index.css";
 
 import App from "@/client/App";
 
+import { ThemeProvider } from "@/client/components/providers/theme-provider";
+
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <App />
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+            <App />
+        </ThemeProvider>
     </StrictMode>,
 );
