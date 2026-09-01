@@ -2,6 +2,10 @@ import type { NavigationLinkProps } from "../types/navigation";
 
 const NavigationLinks: NavigationLinkProps[] = [
     {
+        text: "Timeline",
+        href: "/#timeline"
+    },
+    {
         text: "Projects",
         href: "/#projects"
     },

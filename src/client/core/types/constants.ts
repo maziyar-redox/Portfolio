@@ -26,9 +26,16 @@ type TechCardProps = {
     Icon: Icon;
 };
 
+type MileStonesProps = {
+    id: number;
+    date: string;
+    title: string;
+};
+
 export type {
     SkillsProps,
     ProjectsProps,
     BlogPostsProtoProps,
-    TechCardProps
+    TechCardProps,
+    MileStonesProps
 };

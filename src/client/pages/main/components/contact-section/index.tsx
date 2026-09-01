@@ -3,11 +3,25 @@ import { Input } from "@/client/components/ui/input";
 import { Textarea } from "@/client/components/ui/textarea";
 
 import { Container } from "@/client/components/zippystarter/container";
+import { useActiveSection } from "@/client/core/stores/useActiveSection";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 function ContactSection() {
+    const { setActiveSection } = useActiveSection((state) => state);
+    const { ref, inView } = useInView({
+        threshold: 0.7, // Trigger when 30% of the element is visible
+        triggerOnce: false, // Only trigger once (good for animations)
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection("contact");
+        };
+    }, [inView]);
     return (
         <Container id="contact" className="py-24 bg-card border-t border-border">
-            <div className="max-w-2xl justify-self-center">
+            <div className="max-w-2xl justify-self-center" ref={ref}>
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-display mb-4">
                         INITIATE_CONTACT

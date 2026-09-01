@@ -11,15 +11,29 @@ import { cn } from "@/client/core/lib/utils";
 import { LandingSocialButton } from "@/client/core/constants/landing";
 
 import SocialButton from "@/client/pages/main/components/hero-section/social-button";
+import { useActiveSection } from "@/client/core/stores/useActiveSection";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 function HeroSection() {
+    const { setActiveSection } = useActiveSection((state) => state);
+    const { ref, inView } = useInView({
+        threshold: 0.7, // Trigger when 30% of the element is visible
+        triggerOnce: false, // Only trigger once (good for animations)
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection("");
+        };
+    }, [inView]);
     return (
         <Container
             wrapperClassName="relative min-h-screen flex items-center pt-16 overflow-hidden"
             className="mx-auto max-w-7xl flex-1"
         >
 
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0" ref={ref}>
                 <div className="relative w-screen h-screen bg-background overflow-hidden">
                     <div className={`absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url(./assets/hero-bg.jpg)] before:absolute before:inset-0 before:bg-primary before:mix-blend-color-dodge dark:before:mix-blend-color`} />
                 </div>

@@ -5,6 +5,7 @@ import ProjectSection from "@/client/pages/main/components/projects-section";
 import TechSection from "@/client/pages/main/components/tech-section";
 import BlogsSection from "@/client/pages/main/components/blogs-section";
 import ContactSection from "@/client/pages/main/components/contact-section";
+import TimeLineSection from "@/client/pages/main/components/timeline-section";
 
 import { HomePageMetaData } from "@/client/core/constants/metadata";
 
@@ -24,6 +25,7 @@ function Component() {
                 <meta name="author" content="Maziyar Isanezhad" />
             </Helmet>
             <HeroSection />
+            <TimeLineSection />
             <ProjectSection />
             <TechSection />
             <BlogsSection />

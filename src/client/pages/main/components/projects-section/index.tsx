@@ -1,9 +1,23 @@
 import { Container } from "@/client/components/zippystarter/container";
 import { projects } from "@/client/core/constants/projects";
+import { useActiveSection } from "@/client/core/stores/useActiveSection";
 
 import ProjectCard from "@/client/pages/main/components/projects-section/project-card";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 function ProjectSection() {
+    const { setActiveSection } = useActiveSection((state) => state);
+    const { ref, inView } = useInView({
+        threshold: 0.7, // Trigger when 30% of the element is visible
+        triggerOnce: false, // Only trigger once (good for animations)
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection("projects");
+        };
+    }, [inView]);
     return (
         <Container
             id="projects"
@@ -27,7 +41,7 @@ function ProjectSection() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] grid-rows-[repeat(3,auto)] gap-6">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] grid-rows-[repeat(3,auto)] gap-6" ref={ref}>
                 {projects.map((items, index) => (
                     <ProjectCard
                         key={index}

@@ -5,8 +5,22 @@ import { Button } from "@/client/components/ui/button";
 import { Container } from "@/client/components/zippystarter/container";
 
 import { blogPosts } from "@/client/core/constants/blog-proto";
+import { useActiveSection } from "@/client/core/stores/useActiveSection";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 function BlogsSection() {
+    const { setActiveSection } = useActiveSection((state) => state);
+    const { ref, inView } = useInView({
+        threshold: 0.7, // Trigger when 30% of the element is visible
+        triggerOnce: false, // Only trigger once (good for animations)
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection("blog");
+        };
+    }, [inView]);
     return (
         <Container
             id="blog"
@@ -16,7 +30,7 @@ function BlogsSection() {
                 Transmissions
             </h2>
 
-            <div className="grid gap-8">
+            <div className="grid gap-8" ref={ref}>
                 {blogPosts.map((post, index) => (
                     <Link
                         to="#"

@@ -1,10 +1,24 @@
 import { Container } from "@/client/components/zippystarter/container";
 
 import { skills, techs } from "@/client/core/constants/skills";
+import { useActiveSection } from "@/client/core/stores/useActiveSection";
 
 import TechCard from "@/client/pages/main/components/tech-section/tech-card";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 function TechSection() {
+    const { setActiveSection } = useActiveSection((state) => state);
+    const { ref, inView } = useInView({
+        threshold: 0.7, // Trigger when 30% of the element is visible
+        triggerOnce: false, // Only trigger once (good for animations)
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection("skills");
+        };
+    }, [inView]);
     return (
         <Container
             id="skills"
@@ -12,7 +26,7 @@ function TechSection() {
             wrapperClassName="py-24 bg-secondary/20 border-t border-border"
             className="mx-auto max-w-7xl flex-1"
         >
-            <div className="grid md:grid-cols-12 gap-12">
+            <div className="grid md:grid-cols-12 gap-12" ref={ref}>
                 <div className="md:col-span-4">
                     <h2 className="text-4xl font-display tracking-tighter mb-6">
                         TECH_STACK
