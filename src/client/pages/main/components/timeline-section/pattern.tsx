@@ -7,6 +7,7 @@ import {
     TimelineSeparator,
     TimelineTitle,
 } from "@/client/components/reui/timeline";
+import { Badge } from "@/client/components/ui/badge";
 
 import { milestones } from "@/client/core/constants/milestones";
 
@@ -15,7 +16,7 @@ import { cn } from "@/client/core/lib/utils";
 export function Pattern() {
   return (
     <Timeline defaultValue={5} className="w-full max-w-md">
-        {milestones.map((item) => (
+        {milestones.map((item, index) => (
             <TimelineItem
                 key={item.id}
                 step={item.id}
@@ -33,6 +34,17 @@ export function Pattern() {
                     </TimelineDate>
                     <TimelineTitle>
                         {item.title}
+                        {
+                            index === 0
+                            &&
+                            <>
+                                <div className="mt-1">
+                                    <Badge>
+                                        CURRENT
+                                    </Badge>
+                                </div>
+                            </>
+                        }
                     </TimelineTitle>
                     <TimelineIndicator />
                 </TimelineHeader>
