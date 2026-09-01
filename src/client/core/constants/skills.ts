@@ -1,6 +1,8 @@
-import type { SkillsProps } from "@/client/core/types/constants";
+import { CodeIcon, CpuIcon, DatabaseIcon, TerminalIcon } from "@phosphor-icons/react";
 
-const skills: SkillsProps = [
+import type { SkillsProps, TechCardProps } from "@/client/core/types/constants";
+
+const skills: SkillsProps[] = [
     {
         category: "Frontend",
         items: ["React", "TypeScript", "Tailwind CSS", "Three.js", "Next.js"],
@@ -15,6 +17,26 @@ const skills: SkillsProps = [
     },
 ];
 
+const techs: TechCardProps[] = [
+    {
+        text: "CLEAN_CODE",
+        Icon: CodeIcon,
+    },
+    {
+        text: "SCALABLE_DB",
+        Icon: DatabaseIcon,
+    },
+    {
+        text: "PERFORMANCE",
+        Icon: CpuIcon,
+    },
+    {
+        text: "DEVOPS",
+        Icon: TerminalIcon,
+    },
+];
+
 export {
-    skills
+    skills,
+    techs
 };
