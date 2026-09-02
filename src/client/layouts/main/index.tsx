@@ -28,7 +28,6 @@ function Component() {
                 <Navigation />
                 <Outlet />
                 <Footer />
-                
             </div>
         </>
     );
