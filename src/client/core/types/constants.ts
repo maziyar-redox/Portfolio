@@ -16,9 +16,10 @@ type ProjectsProps = {
 
 type BlogPostsProtoProps = {
     title: string;
-    date: string;
-    readTime: string;
+    date: number;
+    readTime: number;
     excerpt: string;
+    tags: string[];
 };
 
 type TechCardProps = {

@@ -1,7 +1,7 @@
 import { Button } from "@/client/components/ui/button";
 import { Input } from "@/client/components/ui/input";
 import { Textarea } from "@/client/components/ui/textarea";
-import { Field, FieldGroup, FieldLabel } from "@/client/components/ui/field";
+import { Field, FieldError, FieldGroup, FieldLabel } from "@/client/components/ui/field";
 
 import { Container } from "@/client/components/zippystarter/container";
 import { contactFormSchema } from "@/client/core/schema/contact";
@@ -83,6 +83,7 @@ function ContactSection() {
                                             aria-invalid={fieldState.invalid}
                                             autoComplete="off"
                                         />
+                                        {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
                                     </Field>
                                 )}
                             />
@@ -102,6 +103,7 @@ function ContactSection() {
                                             aria-invalid={fieldState.invalid}
                                             autoComplete="off"
                                         />
+                                        {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
                                     </Field>
                                 )}
                             />
@@ -125,10 +127,11 @@ function ContactSection() {
                                         />
                                         <InputGroupAddon align="block-end">
                                             <InputGroupText className="tabular-nums">
-                                                {field.value.length}/100 characters
+                                                {field.value.length}/250 characters
                                             </InputGroupText>
                                         </InputGroupAddon>
                                     </InputGroup>
+                                    {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
                                 </Field>
                             )}
                         />

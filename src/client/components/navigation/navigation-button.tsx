@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import type { NavigationLinkProps } from "@/client/core/types/navigation";
 
@@ -12,6 +12,7 @@ function NavigationButton({
     text
 }: NavigationLinkProps) {
     const { activeSection, setActiveSection } = useActiveSection((state) => state);
+    const location = useLocation();
     return (
         <Link
             to={href}
@@ -21,7 +22,8 @@ function NavigationButton({
             }}
             className={cn(
                 "hover:text-primary transition-colors",
-                ("/#" + activeSection) === href && "text-primary"
+                ("/#" + activeSection) === href && "text-primary",
+                (location.pathname.includes("/blog-list") && href === "/#blog") ? "text-primary" : ""
             )}
         >
             {text}

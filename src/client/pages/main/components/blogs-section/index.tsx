@@ -1,13 +1,15 @@
 import { Link } from "react-router";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { format } from "date-fns";
 
 import { Container } from "@/client/components/zippystarter/container";
 
 import { blogPosts } from "@/client/core/constants/blog-proto";
 import { useActiveSection } from "@/client/core/stores/useActiveSection";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 import { cn } from "@/client/core/lib/utils";
 import { buttonVariants } from "@/client/components/ui/button";
+import { Badge, badgeVariants } from "@/client/components/ui/badge";
 
 function BlogsSection() {
     const { setActiveSection } = useActiveSection((state) => state);
@@ -32,24 +34,35 @@ function BlogsSection() {
 
             <div className="grid gap-8" ref={ref}>
                 {blogPosts.map((post, index) => (
-                    <Link
-                        to="#"
+                    <div
                         key={index}
                         className="group"
                     >
                         <div className="grid gap-4 md:grid-cols-[1fr_auto] items-baseline justify-between mb-2">
-                            <h3 className="text-2xl font-display group-hover:text-primary transition-colors text-balance">
+                            <Link to="#" className="text-2xl font-display group-hover:text-primary transition-colors text-balance">
                                 {post.title}
-                            </h3>
+                            </Link>
                             <span className="font-mono text-xs text-muted-foreground whitespace-nowrap">
-                                {post.date} // {post.readTime}
+                                {format(post.date, "dd MMM yyyy")} // {post.readTime} mins read
                             </span>
                         </div>
-                        <p className="text-muted-foreground mb-4 max-w-2xl">
+                        <p className="text-muted-foreground max-w-2xl">
                             {post.excerpt}
                         </p>
+                        {post.tags.map((value, index) => (
+                            <Link
+                                to="#"
+                                key={index}
+                                className={cn(
+                                    badgeVariants({ variant: "secondary" }),
+                                    "font-mono text-xs mb-4"
+                                )}
+                            >
+                                {value}
+                            </Link>
+                        ))}
                         <div className="h-px w-full bg-border group-hover:bg-primary/50 transition-colors" />
-                    </Link>
+                    </div>
                 ))}
             </div>
 

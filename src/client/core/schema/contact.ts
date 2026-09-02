@@ -13,8 +13,8 @@ const contactFormSchema = z.object({
         .max(32, "Email must be at most 64 characters."),
     message: z
         .string()
-        .min(5, "First Name must be at least 5 characters.")
-        .max(250, "First Name must be at most 250 characters."),
+        .min(5, "Message must be at least 5 characters.")
+        .max(250, "Message must be at most 250 characters."),
 });
 
 export {
