@@ -1,11 +1,20 @@
 import { Button } from "@/client/components/ui/button";
 import { Input } from "@/client/components/ui/input";
 import { Textarea } from "@/client/components/ui/textarea";
+import { Field, FieldGroup, FieldLabel } from "@/client/components/ui/field";
 
 import { Container } from "@/client/components/zippystarter/container";
+import { contactFormSchema } from "@/client/core/schema/contact";
 import { useActiveSection } from "@/client/core/stores/useActiveSection";
+
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Controller, useForm } from "react-hook-form"
+import * as z from "zod";
+import { toast } from "sonner";
+import { InputGroup, InputGroupAddon, InputGroupText, InputGroupTextarea } from "@/client/components/ui/input-group";
 
 function ContactSection() {
     const { setActiveSection } = useActiveSection((state) => state);
@@ -19,6 +28,30 @@ function ContactSection() {
             setActiveSection("contact");
         };
     }, [inView]);
+
+    const contactForm = useForm<z.infer<typeof contactFormSchema>>({
+        resolver: zodResolver(contactFormSchema),
+        defaultValues: {
+            first_name: "",
+            email: "",
+            message: ""
+        },
+    });
+
+    function onMessageSubmit(data: z.infer<typeof contactFormSchema>) {
+        toast("MESSAGE_RECIVED", {
+            description: "Thanks for your submition, Your message will be answered as soon as possible.",
+            position: "bottom-right",
+            classNames: {
+                content: "flex flex-col gap-2",
+            },
+            duration: 4500,
+            style: {
+                "--border-radius": "calc(var(--radius)  + 4px)",
+            } as React.CSSProperties,
+        });
+    };
+    
     return (
         <Container id="contact" className="py-24 bg-card border-t border-border">
             <div className="max-w-2xl justify-self-center" ref={ref}>
@@ -32,40 +65,74 @@ function ContactSection() {
                     </p>
                 </div>
 
-                <form className="grid gap-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                            <label
-                            htmlFor="name"
-                            className="text-xs font-mono text-muted-foreground"
-                            >
-                            NAME
-                            </label>
-                            <Input id="name" placeholder="John Doe" />
+                <form className="grid gap-6" id="form-rhf-demo" onSubmit={contactForm.handleSubmit(onMessageSubmit)}>
+                    <FieldGroup>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Controller
+                                name="first_name"
+                                control={contactForm.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid}>
+                                        <FieldLabel className="text-xs font-mono text-muted-foreground" htmlFor="form-rhf-demo-name">
+                                            NAME
+                                        </FieldLabel>
+                                        <Input
+                                            {...field}
+                                            placeholder="John Doe"
+                                            id="form-rhf-demo-name"
+                                            aria-invalid={fieldState.invalid}
+                                            autoComplete="off"
+                                        />
+                                    </Field>
+                                )}
+                            />
+                            <Controller
+                                name="email"
+                                control={contactForm.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid}>
+                                        <FieldLabel className="text-xs font-mono text-muted-foreground" htmlFor="form-rhf-demo-email">
+                                            EMAIL
+                                        </FieldLabel>
+                                        <Input
+                                            {...field}
+                                            placeholder="john@example.com"
+                                            id="form-rhf-demo-email"
+                                            type="email"
+                                            aria-invalid={fieldState.invalid}
+                                            autoComplete="off"
+                                        />
+                                    </Field>
+                                )}
+                            />
                         </div>
-                        <div className="space-y-2">
-                            <label
-                            htmlFor="email"
-                            className="text-xs font-mono text-muted-foreground"
-                            >
-                            EMAIL
-                            </label>
-                            <Input id="email" type="email" placeholder="john@example.com" />
-                        </div>
-                        </div>
-                        <div className="space-y-2">
-                        <label
-                            htmlFor="message"
-                            className="text-xs font-mono text-muted-foreground"
-                        >
-                            MESSAGE
-                        </label>
-                        <Textarea
-                            id="message"
-                            placeholder="Enter your message..."
-                            className="min-h-37.5"
+                        <Controller
+                            name="message"
+                            control={contactForm.control}
+                            render={({ field, fieldState }) => (
+                                <Field data-invalid={fieldState.invalid}>
+                                    <FieldLabel className="text-xs font-mono text-muted-foreground" htmlFor="form-rhf-demo-message">
+                                        MESSAGE
+                                    </FieldLabel>
+                                    <InputGroup>
+                                        <InputGroupTextarea
+                                            {...field}
+                                            id="form-rhf-demo-message"
+                                            placeholder="Enter your message..."
+                                            className="min-h-37.5"
+                                            aria-invalid={fieldState.invalid}
+                                            autoComplete="off"
+                                        />
+                                        <InputGroupAddon align="block-end">
+                                            <InputGroupText className="tabular-nums">
+                                                {field.value.length}/100 characters
+                                            </InputGroupText>
+                                        </InputGroupAddon>
+                                    </InputGroup>
+                                </Field>
+                            )}
                         />
-                    </div>
+                    </FieldGroup>
                     <Button type="submit" className="w-full" size="lg">
                         SEND TRANSMISSION
                     </Button>

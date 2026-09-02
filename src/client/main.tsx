@@ -9,6 +9,8 @@ import "@/client/index.css";
 
 import { ThemeProvider } from "@/client/components/providers/theme-provider";
 
+import { Toaster } from "@/client/components/ui/sonner";
+
 import { router } from "@/client/routes";
 
 createRoot(document.getElementById("root")!).render(
@@ -16,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
         <HelmetProvider>
             <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
                 <RouterProvider router={router} />
+                <Toaster />
             </ThemeProvider>
         </HelmetProvider>
     </StrictMode>,

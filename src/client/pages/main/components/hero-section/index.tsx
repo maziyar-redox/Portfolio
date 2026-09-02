@@ -15,6 +15,8 @@ import { useActiveSection } from "@/client/core/stores/useActiveSection";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
+import { ScrollToAnchor } from "@/client/core/lib/ScrollToAnchor";
+
 function HeroSection() {
     const { setActiveSection } = useActiveSection((state) => state);
     const { ref, inView } = useInView({
@@ -67,6 +69,7 @@ function HeroSection() {
                         <Link
                             to="#projects"
                             className={cn("uppercase pt-1", buttonVariants({ size: "lg" }), "h-11")}
+                            onClick={ScrollToAnchor}
                         >
                             View projects <ArrowRightIcon className="size-4" />
                         </Link>

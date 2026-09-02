@@ -1,19 +1,19 @@
 import type { SocialButtonProps } from "@/client/core/types/landing";
 
-import { GithubLogoIcon, LinkedinLogoIcon, MailboxIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, LinkedinLogoIcon, TelegramLogoIcon } from "@phosphor-icons/react";
 
 const LandingSocialButton: SocialButtonProps[] = [
     {
-        href: "#",
+        href: "https://github.com/maziyar-redox",
         Icon: GithubLogoIcon
     },
     {
-        href: "#",
+        href: "https://linkedin.com/in/maziyar-isanezhad",
         Icon: LinkedinLogoIcon
     },
     {
-        href: "#",
-        Icon: MailboxIcon
+        href: "https://t.me/sys_127",
+        Icon: TelegramLogoIcon
     },
 ];
 

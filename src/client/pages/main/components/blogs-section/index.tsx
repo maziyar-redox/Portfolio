@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 
-import { Button } from "@/client/components/ui/button";
-
 import { Container } from "@/client/components/zippystarter/container";
 
 import { blogPosts } from "@/client/core/constants/blog-proto";
 import { useActiveSection } from "@/client/core/stores/useActiveSection";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { cn } from "@/client/core/lib/utils";
+import { buttonVariants } from "@/client/components/ui/button";
 
 function BlogsSection() {
     const { setActiveSection } = useActiveSection((state) => state);
@@ -54,9 +54,12 @@ function BlogsSection() {
             </div>
 
             <div className="text-center mt-12">
-                <Button variant="outline" size="lg" className="pt-1 dark:hover:text-primary">
+                <Link to="/blog-list" className={cn(
+                    "pt-1 dark:hover:text-primary",
+                    buttonVariants({variant: "outline", size: "lg"})
+                )}>
                     VIEW ALL POSTS
-                </Button>
+                </Link>
             </div>
         </Container>
     );
