@@ -5,6 +5,7 @@ import { Outlet } from "react-router";
 import Navigation from "@/client/components/navigation";
 import Loading from "@/client/components/loading";
 import Footer from "@/client/components/footer";
+import ScrollToTop from "@/client/components/scrollToTop";
 
 function Component() {
 
@@ -21,11 +22,15 @@ function Component() {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden">
-            <Navigation />
-            <Outlet />
-            <Footer />
-        </div>
+        <>
+            <ScrollToTop />
+            <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden">
+                <Navigation />
+                <Outlet />
+                <Footer />
+                
+            </div>
+        </>
     );
 };
 
