@@ -29,6 +29,34 @@ const HomePageMetaData: PageMetaData = {
     ],
 };
 
+const BlogListPageMetaData: PageMetaData = {
+    title: PAGE_TITLES.BLOG_LIST,
+    description: "Explore the polymath blog of Maziyar Isanezhad. Read in-depth articles on physics, applied mathematics, mechanics, Golang programming, DevOps infrastructure, and bridging theoretical science with production-grade software engineering.",
+    keywords: [
+        "polymath blog",
+        "physics blog",
+        "mathematics blog",
+        "mechanics engineering",
+        "Golang programming",
+        "DevOps blog",
+        "software engineering blog",
+        "technical blog",
+        "programming tutorials",
+        "cloud infrastructure",
+        "Kubernetes",
+        "distributed systems",
+        "computational physics",
+        "numerical methods",
+        "algorithm design",
+        "systems programming",
+        "developer blog",
+        "engineering blog",
+        "research blog",
+        "Maziyar Isanezhad blog"
+    ],
+};
+
 export {
-    HomePageMetaData
-}
+    HomePageMetaData,
+    BlogListPageMetaData
+};
