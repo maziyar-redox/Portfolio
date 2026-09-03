@@ -57,12 +57,10 @@ function ErrorLayout() {
     return (
         <>
             <ScrollToTop />
-            <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden flex justify-center items-center">
+            <div className="min-h-screen h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden flex flex-col justify-between items-center pt-24 md:pt-48 gap-y-12">
                 <Navigation />
                 <RootErrorLayout />
-                <div className="absolute right-0 left-0 bottom-0">
-                    <Footer />
-                </div>
+                <Footer />
             </div>
         </>
     );
