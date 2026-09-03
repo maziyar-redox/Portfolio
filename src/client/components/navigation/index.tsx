@@ -5,6 +5,7 @@ import { Container } from "@/client/components/zippystarter/container";
 import Logo from "@/client/components/navigation/logo";
 import NavigationButton from "@/client/components/navigation/navigation-button";
 import ResumeButton from "@/client/components/navigation/resume-button";
+import MobileNavigation from "@/client/components/navigation/mobile-navigation";
 
 function Navigation() {
     return (
@@ -24,6 +25,7 @@ function Navigation() {
                 ))}
             </nav>
             <ResumeButton />
+            <MobileNavigation />
         </Container>
     );
 };

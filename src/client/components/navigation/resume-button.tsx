@@ -4,7 +4,7 @@ function ResumeButton() {
     return (
         <Button
             variant="outline"
-            className="font-mono text-xs border-primary/50 hover:bg-primary/10 hover:text-primary hover:border-primary"
+            className="font-mono text-xs border-primary/50 hover:bg-primary/10 hover:text-primary hover:border-primary hidden md:block"
         >
             resume_v1.pdf
         </Button>

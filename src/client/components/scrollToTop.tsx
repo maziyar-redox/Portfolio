@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 
 function ScrollToTop() {
-    const { activeTopScroll } = useActiveTopScroll((state) => state);
+    const { activeTopScroll, activeElement } = useActiveTopScroll((state) => state);
 	const [activeScroll, setActiveScroll] = useState<boolean>(false);
 
 	const scrollToTop = () => {
@@ -20,8 +20,15 @@ function ScrollToTop() {
 	};
 
 	useEffect(() => {
+
+		if (activeElement === false) {
+			setActiveScroll(false);
+			return () => undefined;
+		};
+
 		const toggleVisible = () => {
 			const scrolled = document.documentElement.scrollTop;
+
 			if (scrolled > 300 && activeTopScroll === false) {
 				setActiveScroll(true);
 				return;
@@ -41,7 +48,7 @@ function ScrollToTop() {
 		window.addEventListener("scroll", toggleVisible);
 
 		return () => window.removeEventListener("scroll", toggleVisible);
-	}, [activeTopScroll]);
+	}, [activeTopScroll, activeElement]);
 
 	return (
 		<Button variant="default" size="icon-lg" className={cn(
