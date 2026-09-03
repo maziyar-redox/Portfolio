@@ -104,7 +104,7 @@ function Component() {
                                 )}
                             />
                         </FieldGroup>
-                        <Button variant="outline" className="pt-1" onClick={() => {
+                        <Button variant="outline" className="md:pt-1" onClick={() => {
                             searchBlogForm.reset();
                             setValue("")
                         }}>

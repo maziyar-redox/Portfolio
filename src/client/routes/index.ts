@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect, RouterContextProvider, type LoaderFunctionArgs } from "react-router";
 
 import Loading from "@/client/components/loading";
 
@@ -8,6 +8,7 @@ const MainLayout = import("@/client/layouts/main");
 
 const MainPage = import("@/client/pages/main");
 const BlogListPage = import("@/client/pages/blog-list");
+const BlogPage = import("@/client/pages/blog");
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,24 @@ const router = createBrowserRouter([
                 index: true,
                 lazy: () => BlogListPage
             }
+        ],
+    },
+    {
+        path: "/blog",
+        HydrateFallback: Loading,
+        ErrorBoundary: ErrorLayout,
+        lazy: () => MainLayout,
+        children: [
+            {
+                index: true,
+                loader: (e: LoaderFunctionArgs<Readonly<RouterContextProvider>>) => {
+                    throw redirect("/");
+                },
+            },
+            {
+                path: ":id",
+                lazy: () => BlogPage
+            },
         ],
     },
 ]);
