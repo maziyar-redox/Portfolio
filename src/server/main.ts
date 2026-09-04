@@ -16,7 +16,11 @@ const __dirname = path.dirname(__filename);
 
 const app: Express = express();
 
-const server = app.listen(8000, "localhost");
+const PORT = process.env.PORT || 8000;
+
+const server = app.listen(PORT, () => {
+    console.log("LISTENING ON PORT : ", PORT);
+});
 
 app.get("/dl", (req: Request, res: Response) => {
     const filePath = path.join(__dirname, './static/example.md');
