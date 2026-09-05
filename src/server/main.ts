@@ -6,7 +6,7 @@ import ViteExpress from "vite-express";
 import dotenv from "@dotenvx/dotenvx";
 
 import { fileURLToPath } from "url";
-import fs from 'fs';
+import fs from "fs";
 import path from "path";
 
 dotenv.config();
@@ -19,19 +19,17 @@ const app: Express = express();
 const PORT: number = (process.env.PORT || 8000) as number;
 
 app.get("/dl", (_: Request, res: Response) => {
-    const filePath = path.join(__dirname, './static/example.md');
-    res.setHeader('Content-Type', 'text/markdown');
+    const filePath = path.join(__dirname, "./static/example.md");
+    res.setHeader("Content-Type", "text/markdown");
   
-    // Create read stream and pipe to response
     const stream = fs.createReadStream(filePath);
     stream.pipe(res);
     
-    // Handle errors
-    stream.on('error', (error) => {
-        console.error('Stream error:', error);
-        res.status(500).send('Error streaming file');
+    stream.on("error", (error) => {
+        console.error("Stream error:", error);
+        res.status(500).send("Error streaming file");
     });
-})
+});
 
 ViteExpress.listen(app, PORT, () => {
     console.log("LISTENING ON PORT : ", PORT);
