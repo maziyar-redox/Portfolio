@@ -18,9 +18,7 @@ const app: Express = express();
 
 const PORT = process.env.PORT || 8000;
 
-const server = app.listen(PORT, () => {
-    console.log("LISTENING ON PORT : ", PORT);
-});
+const server = app.listen(PORT);
 
 app.get("/dl", (req: Request, res: Response) => {
     const filePath = path.join(__dirname, './static/example.md');
@@ -37,4 +35,6 @@ app.get("/dl", (req: Request, res: Response) => {
     });
 })
 
-ViteExpress.bind(app, server);
+ViteExpress.bind(app, server, () => {
+    console.log("LISTENING ON PORT : ", PORT);
+});
