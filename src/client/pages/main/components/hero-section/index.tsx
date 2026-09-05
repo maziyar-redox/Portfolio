@@ -12,6 +12,9 @@ import { LandingSocialButton } from "@/client/core/constants/landing";
 
 import SocialButton from "@/client/pages/main/components/hero-section/social-button";
 import { useActiveSection } from "@/client/core/stores/useActiveSection";
+
+import BACKGROUND_IMG from "@/client/assets/hero-bg.jpg";
+
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -37,7 +40,7 @@ function HeroSection() {
 
             <div className="absolute inset-0 z-0" ref={ref}>
                 <div className="relative w-screen h-screen bg-background overflow-hidden">
-                    <div className={`absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url(./assets/hero-bg.jpg)] before:absolute before:inset-0 before:bg-primary before:mix-blend-color-dodge dark:before:mix-blend-color`} />
+                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-primary before:mix-blend-color-dodge dark:before:mix-blend-color" style={{ background: `url(${BACKGROUND_IMG})` }} />
                 </div>
                 <div className="absolute inset-0 bg-linear-to-b from-background/80 via-background/50 to-background" />
             </div>

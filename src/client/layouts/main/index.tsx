@@ -6,6 +6,7 @@ import Navigation from "@/client/components/navigation";
 import Loading from "@/client/components/loading";
 import Footer from "@/client/components/footer";
 import ScrollToTop from "@/client/components/scrollToTop";
+
 import { useIsMounted } from "usehooks-ts";
 
 function Component() {
