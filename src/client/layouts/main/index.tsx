@@ -6,14 +6,20 @@ import Navigation from "@/client/components/navigation";
 import Loading from "@/client/components/loading";
 import Footer from "@/client/components/footer";
 import ScrollToTop from "@/client/components/scrollToTop";
+import { useIsMounted } from "usehooks-ts";
 
 function Component() {
 
     const [loading, setLoading] = useState<boolean>(true);
+    const isMounted = useIsMounted();
 
     useEffect(() => {
-        return () => setLoading(false)
-    }, []);
+        if (isMounted()) {
+            setLoading(false);
+        };
+
+        return () => undefined;
+    }, [isMounted]);
 
     if (loading) {
         return (
