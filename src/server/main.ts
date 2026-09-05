@@ -16,11 +16,9 @@ const __dirname = path.dirname(__filename);
 
 const app: Express = express();
 
-const PORT = process.env.PORT || 8000;
+const PORT: number = (process.env.PORT || 8000) as number;
 
-const server = app.listen(PORT);
-
-app.get("/dl", (req: Request, res: Response) => {
+app.get("/dl", (_: Request, res: Response) => {
     const filePath = path.join(__dirname, './static/example.md');
     res.setHeader('Content-Type', 'text/markdown');
   
@@ -35,6 +33,6 @@ app.get("/dl", (req: Request, res: Response) => {
     });
 })
 
-ViteExpress.bind(app, server, () => {
+ViteExpress.listen(app, PORT, () => {
     console.log("LISTENING ON PORT : ", PORT);
 });
