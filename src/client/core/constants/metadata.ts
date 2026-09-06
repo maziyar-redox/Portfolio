@@ -56,7 +56,91 @@ const BlogListPageMetaData: PageMetaData = {
     ],
 };
 
+const NotfoundErrorPageMetaData: PageMetaData = {
+    title: PAGE_TITLES.NOT_FOUND_ERROR,
+    description: "The page that you requested is not exists on our servers.",
+    keywords: [
+        "polymath blog",
+        "physics blog",
+        "mathematics blog",
+        "mechanics engineering",
+        "Golang programming",
+        "DevOps blog",
+        "software engineering blog",
+        "technical blog",
+        "programming tutorials",
+        "cloud infrastructure",
+        "Kubernetes",
+        "distributed systems",
+        "computational physics",
+        "numerical methods",
+        "algorithm design",
+        "systems programming",
+        "developer blog",
+        "engineering blog",
+        "research blog",
+        "Maziyar Isanezhad blog"
+    ],
+};
+
+const InternalErrorPageMetaData: PageMetaData = {
+    title: PAGE_TITLES.INTERNAL_ERROR,
+    description: "An error ocured in our servers.",
+    keywords: [
+        "polymath blog",
+        "physics blog",
+        "mathematics blog",
+        "mechanics engineering",
+        "Golang programming",
+        "DevOps blog",
+        "software engineering blog",
+        "technical blog",
+        "programming tutorials",
+        "cloud infrastructure",
+        "Kubernetes",
+        "distributed systems",
+        "computational physics",
+        "numerical methods",
+        "algorithm design",
+        "systems programming",
+        "developer blog",
+        "engineering blog",
+        "research blog",
+        "Maziyar Isanezhad blog"
+    ],
+};
+
+const ForbiddenErrorPageMetaData: PageMetaData = {
+    title: PAGE_TITLES.INTERNAL_ERROR,
+    description: "Requested page is forbidden.",
+    keywords: [
+        "polymath blog",
+        "physics blog",
+        "mathematics blog",
+        "mechanics engineering",
+        "Golang programming",
+        "DevOps blog",
+        "software engineering blog",
+        "technical blog",
+        "programming tutorials",
+        "cloud infrastructure",
+        "Kubernetes",
+        "distributed systems",
+        "computational physics",
+        "numerical methods",
+        "algorithm design",
+        "systems programming",
+        "developer blog",
+        "engineering blog",
+        "research blog",
+        "Maziyar Isanezhad blog"
+    ],
+};
+
 export {
     HomePageMetaData,
-    BlogListPageMetaData
+    BlogListPageMetaData,
+    NotfoundErrorPageMetaData,
+    InternalErrorPageMetaData,
+    ForbiddenErrorPageMetaData
 };
