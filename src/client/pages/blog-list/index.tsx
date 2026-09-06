@@ -21,10 +21,14 @@ import BlogCard from "@/client/pages/blog-list/components/blogCard"
 import BlogPagination from "@/client/pages/blog-list/components/blogPagination";
 import { BlogListPageMetaData } from "@/client/core/constants/metadata";
 
+import { cn } from "@/client/core/lib/utils";
+
 function Component() {
 
     const [searchParams, setSearchParams] = useSearchParams();
     const getTerm = searchParams.get("term");
+
+    const loaded = true;
 
     const [debouncedValue, setValue] = useDebounceValue(getTerm, 500);
 
@@ -64,7 +68,10 @@ function Component() {
             <Container
                 id="projects"
                 component="section"
-                wrapperClassName="py-24"
+                wrapperClassName={cn(
+                    "py-24",
+                    loaded ? "h-[90vh]" : ""
+                )}
                 className="mx-auto max-w-7xl flex-1"
             >
                 <div className="flex flex-col md:flex-row gap-y-10 justify-between items-center w-full">
@@ -112,18 +119,34 @@ function Component() {
                         </Button>
                     </form>
                 </div>
-                <div className="py-10 w-full flex flex-col gap-y-10">
-                    {blogPosts.map((value, index) => (
-                        <BlogCard
-                            key={index}
-                            title={value.title}
-                            excerpt={value.excerpt}
-                            tags={value.tags}
-                            date={value.date}
-                        />
-                    ))}
-                </div>
-                <BlogPagination />
+                {
+                    loaded
+                    ?
+                    (
+                        <div className="h-full w-full flex items-center justify-center mt-36">
+                            <h1 className="font-mono text-2xl md:text-4xl text-center">
+                                Sorry, There isn't any blog at time :(
+                            </h1>
+                        </div>
+                    )
+                    :
+                    (
+                        <>
+                            <div className="py-10 w-full flex flex-col gap-y-10">
+                                {blogPosts.map((value, index) => (
+                                    <BlogCard
+                                        key={index}
+                                        title={value.title}
+                                        excerpt={value.excerpt}
+                                        tags={value.tags}
+                                        date={value.date}
+                                    />
+                                ))}
+                            </div>
+                            <BlogPagination />
+                        </>
+                    )
+                }
             </Container>
         </>
     );
