@@ -9,7 +9,7 @@ import { blogPosts } from "@/client/core/constants/blog-proto";
 import { useActiveSection } from "@/client/core/stores/useActiveSection";
 import { cn } from "@/client/core/lib/utils";
 import { buttonVariants } from "@/client/components/ui/button";
-import { Badge, badgeVariants } from "@/client/components/ui/badge";
+import { badgeVariants } from "@/client/components/ui/badge";
 
 function BlogsSection() {
     const { setActiveSection } = useActiveSection((state) => state);
@@ -32,7 +32,13 @@ function BlogsSection() {
                 Transmissions
             </h2>
 
-            <div className="grid gap-8" ref={ref}>
+            <div className="w-full flex justify-center items-center">
+                <h1 className="font-heading text-2xl">
+                    There isn't any logs yet.
+                </h1>
+            </div>
+
+            {/* <div className="grid gap-8" ref={ref}>
                 {blogPosts.map((post, index) => (
                     <div
                         key={index}
@@ -49,22 +55,24 @@ function BlogsSection() {
                         <p className="text-muted-foreground max-w-2xl">
                             {post.excerpt}
                         </p>
-                        {post.tags.map((value, index) => (
-                            <Link
-                                to="#"
-                                key={index}
-                                className={cn(
-                                    badgeVariants({ variant: "secondary" }),
-                                    "font-mono text-xs mb-4"
-                                )}
-                            >
-                                {value}
-                            </Link>
-                        ))}
+                        <div className="flex flex-row justify-start items-center my-4 gap-x-4">
+                            {post.tags.map((value, index) => (
+                                <Link
+                                    to="#"
+                                    key={index}
+                                    className={cn(
+                                        badgeVariants({ variant: "secondary" }),
+                                        "font-mono text-xs"
+                                    )}
+                                >
+                                    {value}
+                                </Link>
+                            ))}
+                        </div>
                         <div className="h-px w-full bg-border group-hover:bg-primary/50 transition-colors" />
                     </div>
                 ))}
-            </div>
+            </div> */}
 
             <div className="text-center mt-12">
                 <Link to="/blog-list" className={cn(

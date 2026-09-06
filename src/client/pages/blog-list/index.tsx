@@ -124,7 +124,7 @@ function Component() {
                     ?
                     (
                         <div className="h-full w-full flex items-center justify-center mt-36">
-                            <h1 className="font-mono text-2xl md:text-4xl text-center">
+                            <h1 className="font-heading text-2xl md:text-4xl text-center">
                                 Sorry, There isn't any blog at time :(
                             </h1>
                         </div>

@@ -41,7 +41,13 @@ function ProjectSection() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] grid-rows-[repeat(3,auto)] gap-6" ref={ref}>
+            <div className="w-full flex justify-center items-center">
+                <h1 className="font-heading text-2xl">
+                    There isn't any project yet.
+                </h1>
+            </div>
+
+            {/* <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] grid-rows-[repeat(3,auto)] gap-6" ref={ref}>
                 {projects.map((items, index) => (
                     <ProjectCard
                         key={index}
@@ -53,7 +59,7 @@ function ProjectSection() {
                         repo={items.repo}
                     />
                 ))}
-            </div>
+            </div> */}
         </Container>
     );
 };
