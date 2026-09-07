@@ -17,6 +17,7 @@
         "@hookform/resolvers": "^5.9.1",
         "@phosphor-icons/react": "^2.1.10",
         "@tailwindcss/vite": "^4.3.3",
+        "@tanstack/highlight": "^0.0.10",
         "@tanstack/markdown": "^0.0.13",
         "@tanstack/react-query": "^5.102.8",
         "axios": "^1.20.0",
