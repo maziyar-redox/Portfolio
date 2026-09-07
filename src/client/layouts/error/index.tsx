@@ -3,6 +3,8 @@ import { isRouteErrorResponse, useRouteError } from "react-router";
 
 import { useEffect, useState } from "react";
 
+import { useIsMounted } from "usehooks-ts";
+
 // Importing custom error pages
 import NotFoundPage from "@/client/pages/errors/not-found";
 import ForbiddenErrorPage from "@/client/pages/errors/forbidden-error";
@@ -42,11 +44,17 @@ function RootErrorLayout() {
 };
 
 function ErrorLayout() {
+
     const [loading, setLoading] = useState<boolean>(true);
+    const isMounted = useIsMounted();
     
     useEffect(() => {
-        return () => setLoading(false)
-    }, []);
+        if (isMounted()) {
+            setLoading(false);
+        };
+
+        return () => undefined;
+    }, [isMounted]);
 
     if (loading) {
         return (
