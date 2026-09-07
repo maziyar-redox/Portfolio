@@ -1,10 +1,9 @@
-name: Deploy-Dev
+name: Deploy-Dev-Test
 
 on:
     push:
         branches:
             - dev-front
-            - dev
 
 jobs:
     deploy:
@@ -36,6 +35,17 @@ jobs:
                     
                     echo "PULL successful."
 
+                    echo "Running npm install and build script..."
+
+                    npm install --platform=linux --arch=x64
+                    npm run build
+
+                    echo "Build successful."
+
+                    echo "Running server with pm2..."
+
                     cd ..
-                    
+
+                    npx pm2 restart portfolio-dev-test
+
                     echo "CI/CD SSH Completed!"
