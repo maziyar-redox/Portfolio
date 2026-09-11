@@ -27,7 +27,7 @@ USER node
  
  
 # Expose Vite dev server port
-EXPOSE 3560
+EXPOSE 3000
  
 # Run Vite in dev mode, accessible outside the container
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

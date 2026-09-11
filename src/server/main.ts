@@ -11,7 +11,7 @@ dotenv.config();
 
 const app: Express = express();
 
-const PORT: number = (process.env.PORT || 8000) as number;
+const PORT: number = (process.env.PORT || 3000) as number;
 
 ViteExpress.listen(app, PORT, () => {
     logger.info(`Bootstrapping server on PORT: ${PORT}`);
