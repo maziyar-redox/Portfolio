@@ -3,7 +3,7 @@ name: Deploy-Dev-Test
 on:
     push:
         branches:
-            - dev-front
+            - NONE
 
 jobs:
     deploy:
