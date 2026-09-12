@@ -1,29 +1,77 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Generated .gitignore file for: JavaScript, React, NestJS, VSCode, Windows, Linux, macOS, npm, Webpack, Babel, Rollup, Vite, SQLite, JSON, Docker
+# Created with FOSSA's DevOps Tools
 
-node_modules
-dist
-dist-ssr
-*.local
+# JavaScript
+# Add JavaScript-specific ignores here
 
-# Editor directories and files
+# React
+node_modules/
+build/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# NestJS
+# Add NestJS-specific ignores here
+
+# VSCode
 .vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
+# Windows
+# Add Windows-specific ignores here
+
+# Linux
+# Add Linux-specific ignores here
+
+# macOS
+# Add macOS-specific ignores here
+
+# npm
+# Add npm-specific ignores here
+
+# Webpack
+# Add Webpack-specific ignores here
+
+# Babel
+# Add Babel-specific ignores here
+
+# Rollup
+# Add Rollup-specific ignores here
+
+# Vite
+# Add Vite-specific ignores here
+
+# SQLite
+# Add SQLite-specific ignores here
+
+# JSON
+# Add JSON-specific ignores here
+
+# Docker
+docker-compose.override.yml
+Dockerfile.override
+
+# Common
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+
+# IDE and editor generated files
+.idea/
+*.sublime-*
+
+# Local environment files
 .env
-.env.*
+.env.local
+.env.*.local
 
 package-lock.json
