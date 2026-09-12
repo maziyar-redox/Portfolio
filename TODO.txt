@@ -1,0 +1,11 @@
+1-Add huskey
+2-Add sherif
+3-Add knip
+4-Dockerize project
+5-Add documention
+6-Install shadcn ui as package
+7-Add admin panel
+8-Add licence, etc...
+9-Configure turbo repo
+10-Add env manager(turbo repo)
+11-Add compatible env node manager(Dotenvx)
